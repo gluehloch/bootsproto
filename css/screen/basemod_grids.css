@@ -71,7 +71,10 @@
 
   #header .page {
     position:relative;
-  padding: 130px 0px 20px 0px;
+    padding: 130px 0px 20px 0px;
+    background-image: url(../../images/aw_logo.png);
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
   }
 
   #header h1 { color: #fff !important; }
