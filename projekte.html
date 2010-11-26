@@ -72,7 +72,7 @@ Standort:      Hamburg, Frankfurt, Prag<br/>
 in die Wartungsphase. Lösen von vereinzelten Performance Problemen
 in der Datenbank.<br/>
 <br/>
-DV-Basis: Visual Studio 2008 und 2010, Oracle PL/SQL, SQL*Developer.
+DV-Basis: Websphere, Rational Application Developer, Oracle PL/SQL, SQL*Developer.
 <br/>
 Plattform: Unix, Windows XP
 <br/>
@@ -87,15 +87,21 @@ Rolle:         Architektur und Entwicklung<br/>
 Standort:      Hamburg, Frankfurt, Prag<br/>
 <br/>
 Client Profile Erstellung für die Commerzbank. Anhand der COBA Geschäftsdaten wird ein zeitliches
-Profil über die Erträge und Kosten eines Kundenberaters erstellt. Die Online Anwendung ist mit
-Hilfe von C# / ASP.NET entwickelt. Zur Erleichterung der Javascript Programmierung wird JQuery
-eingesetzt. Die fachliche Verarbeitung erfolgt in der Datenbank (Oracle, PL/SQL). Die
-Abnahmetests führt die Fachabteilung in einem separaten Testlabor (Integrationsumgebung) durch.
-Die Tests werden in Excel formuliert und automatisiert in das Testlabor übernommen.<br/>
+Profil über die Erträge und Kosten eines Kundenberaters erstellt.<br/>
 <br/>
-DV-Basis: Architekur und Design mit Hilfe von Sparx EA visualisiert. Visual Studio 2008 und 2010,
-C#, ASP.NET, JQuery, Oracle PL/SQL, SQL*Developer, Unit Tests mit Hilfe von Groovy und Gant.
-Die Test-Utilities sind in Java 6 geschrieben mit Hilfe von Eclipse, Maven und Groovy.
+Zur Anbindung in die COBA IT Welt  sind unterschiedliche Protokolle zu verwenden: Connect:Direct 
+und SOAP (Apache Axis). Die Online Anwendung ist mit Hilfe von Java/JSF (HTTPS) entwickelt. Zur
+Erleichterung der Javascript Programmierung wird JQuery eingesetzt.<br/>
+<br/>
+Verschlüsselung der geschäftskritischen Dokumente (Besprechungsergebnisse, Verträge mit Kunden)
+ist mit Hilfe der JCA/JCE implementiert.<br/>
+<br/>
+Die fachliche Verarbeitung erfolgt in der Datenbank (Oracle, PL/SQL). Die Abnahmetests führt die
+Fachabteilung in einem separaten, automatisierten Testlabor durch. Die
+Tests werden in Excel formuliert und automatisiert in das Testlabor übernommen.<br/>
+<br/>
+DV-Basis: Java 6, JCA/JCE, Oracle, PL/SQL, Websphere, Rational Application Developer, SQL*Developer,
+SQL*Plus, TFS, Maven, JUnit.
 <br/>
 Plattform: Unix, Windows XP
 <br/>
@@ -133,7 +139,8 @@ Neuentwicklung einer internen Swing Fat Client Anwendung zur Pflege von SLAs (Se
 bei EON. Die Client Anwendung ist über Hessian-Burlab an einen Tomcat Server angebunden.
 Dieser erlaubt den Zugriff über einen Web-Service auf die Datenbank.<br/>
 <br/>
-DV-Basis: Java 6, Eclipse, Swing (JGoodies), Ant, MS-SQLServer, Hessian Burlab Webservice, Spring, Hibernate, JUnit
+DV-Basis: Java 6, Eclipse, Swing (JGoodies), Ant, MS-SQLServer, Hessian Burlab Webservice (SSL), Spring,
+Hibernate, JUnit
 <br/>
 Plattform: Windows XP<br/>
               </code>
@@ -162,8 +169,9 @@ Rolle:         Entwickler<br/>
 Standort:      Wilhelmshaven<br/>
 <br/>
 Anbindung einer Online Anwendung der Bundeswehr an eine bestehende LDAP Infrastruktur.<br/>
+Verschlüsselung von Dokumenten.<br/>
 <br/>
-DV-Basis: Java 1.4, Struts, Ant, Tomcat, Eclipse, Visual Source Safe, LDAP, JUnit
+DV-Basis: Java 1.4, JCA/JCE, Struts, Ant, Tomcat, Eclipse, Visual Source Safe, LDAP, JUnit
 <br/>
 Plattform: Windows NT
 <br/>
