@@ -1,3 +1,50 @@
+body {
+    /* Der Abstand bis zum fixed Menu-Header. Header ist somit 40px hoch. */
+    padding-top: 40px;
+}
+
+.navbar-inverse .navbar-inner {
+    background-color: #333300;
+    background-image: linear-gradient(to bottom, #333300, #33330F);
+    background-repeat: repeat-x;
+    border-color: #252525;
+}
+
+.subhead h1 {
+    font-size: 60px;
+}
+
+.jumbotron {
+    background-color: #333300; /*#1B1B1B;*/
+    background-image: url(./../img/aw_logo.png), linear-gradient(to bottom, #333B00, #33330F);
+    /* linear-gradient(to bottom, #222222, #111111); */
+    background-repeat: repeat-x;
+    /*border-color: #252525;*/
+    /*
+    background: none repeat scroll 0 0 #333300;
+    -moz-linear-gradient(white 0%, #9FBFD2 100%);
+    background-image: url(./../img/aw_logo.png);
+    */
+    background-repeat: no-repeat;
+    background-position: 90% 75%;
+}
+
+.jumbotron h1 {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: #FFFFFF;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+.lead {
+    color: #FFFFFF;
+}
+
 .footer {
     text-align: center;
     padding: 30px 0;
