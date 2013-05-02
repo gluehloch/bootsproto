@@ -37,7 +37,7 @@ body {
 }
 
 .masthead {
-	padding: 60px 0 60px;
+	padding: 100px 0 60px;
 }
 
 .jumbotron h1 {
@@ -55,6 +55,10 @@ body {
 }
 
 .container {
+}
+
+.row-fluid .thumbnails ul li {
+	height: 150px;
 }
 
 .marketing h1 {
