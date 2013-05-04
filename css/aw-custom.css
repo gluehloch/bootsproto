@@ -57,8 +57,70 @@ body {
 .container {
 }
 
-.row-fluid .thumbnails ul li {
+
+@media (min-width: 1200px) {
+    .thumbnails li {
+        border-radius: 6px 6px 6px 6px;
+        text-align: center;
+        background-color: #EEEEEE;
+        height: 150px;
+    }
 }
+
+@media (min-width: 980px) and (max-width: 1199px) {
+    .thumbnails li {
+        border-radius: 6px 6px 6px 6px;
+        text-align: center;
+        background-color: #EEEEEE;
+        height: 170px;
+    }
+}
+
+/*
+@media (min-width: 768px) and (max-width: 979px) {
+    .thumbnails li {
+        border-radius: 6px 6px 6px 6px;
+        text-align: center;
+        background-color: #EEEEEE;
+        height: 200px;
+}
+
+@media (max-width: 767px) {
+    .thumbnails li {
+        border-radius: 6px 6px 6px 6px;
+        text-align: center;
+        background-color: #EEEEEE;
+        height: 250px;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+	.thumbnails li {
+        border-radius: 6px 6px 6px 6px;
+        text-align: center;
+        background-color: #EEEEEE;
+        height: 200px;
+}
+
+@media (max-width: 767px) {
+    .thumbnails li {
+        border-radius: 6px 6px 6px 6px;
+        text-align: center;
+        background-color: #EEEEEE;
+        height: 220px;
+}
+
+@media (max-width: 480px) {
+ 
+}
+
+@media (max-width: 979px) {
+
+}
+
+@media (min-width: 980px) {
+
+}
+*/
 
 .marketing h1 {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
