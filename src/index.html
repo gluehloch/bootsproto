@@ -1,144 +1,107 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<!doctype html>
+<html lang="de" ng-app="gluehloch">
 <head>
 <meta charset="utf-8">
-<title>Andre Winkler</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Le styles -->
-<link href="./css/bootstrap.min.css" rel="stylesheet">
-<style>
-body {
-	
-}
-</style>
-<link href="./css/bootstrap-responsive.min.css" rel="stylesheet">
-
-<link href="./css/aw.css" rel="stylesheet">
-
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-<!-- Fav and touch icons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144"
-	href="./img/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-	href="./img/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72"
-	href="./img/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed"
-	href="./img/apple-touch-icon-57-precomposed.png">
-<link rel="shortcut icon" href=".favicon.ico">
+<title>Andre Winkler - IT Beratung</title>
+<link rel="stylesheet"
+  href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/gluehloch.css" />
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--
+<script src="bower_components/angularjs/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="js/gluehloch.js"></script>
+-->
 </head>
-
 <body>
 
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="btn btn-navbar" data-toggle="collapse"
-					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span>
-				</a> <a class="brand" href="#">AW</a>
-				<div class="nav-collapse collapse">
-					<ul class="nav">
-						<!-- class="active" -->
-						<li><a href="#about">Über mich</a></li>
-						<li><a href="#vita">Vita</a></li>
-						<li><a href="#projects">Projekte</a></li>
-						<li><a href="#download">Download</a></li>
-						<li><a href="#contact">Impressum</a></li>
-                        <li><a href="#cite">Zitate</a></li>
-					</ul>
-				</div>
-				<!--  /.nav-collapse -->
-			</div>
-		</div>
-	</div>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="HeaderCtrl">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+          data-toggle="collapse" data-target="#navbar"
+          aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span> <span
+            class="icon-bar"></span> <span class="icon-bar"></span> <span
+            class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#home">AWTools</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#start">Start</a></li>
+          <li><a href="#projects">Projekte</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#contact">Impressum</a></li>
+          <li><a href="#cite">Zitate</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
 
-	<!-- Subhead ================================================== -->
-	<header class="jumbotron masthead" id="overview">
-		<div class="container">
-			<h1>Andre Winkler</h1>
-			<p class="lead">IT Beratung</p>
-		</div>
-		<!--
-			<h1>Andre Winkler</h1>
-			<p class="lead">IT Beratung</p>
-		-->
-	</header>
+  <div id="awtools-header" class="bs-docs-header">
+    <div class="container">
+      <h1>Andre Winkler</h1>
+      <p class="lead">IT Beratung</p>
+    </div>
+  </div>
 
 	<div class="container">
-	    <a id="about"></a>
+	    <a id="start"></a>
 		<div class="marketing">
 			<h1>Freiberufliche IT Beratung</h1>	
-			<p>Seit dem 02.11.2010 arbeite ich als freiberuflicher IT
-				Berater. Mein Schwerpunkt liegt in der Entwicklung von individuellen
-				Software Lösungen auf Basis von Java und Oracle. Mit 15 Jahren
-				Berufserfahrung - erworben in verschiedenen Fachgebieten 
-				(Banken, Telekommunikation, Maschinenbau) - 
-
-
-				Ich verfüge über
-				mehr als 15 Jahre Berufserfahrung in der IT Branche. Meine
-				Ausbildung zum Diplom Informatiker habe ich an der Uni Passau
-				abgeschlossen. Im Anschluss zu meinem Studium konnte ich reichlich
-				Projekterfahrung in den folgenden Bereichen sammeln: Maschinenbau
-				(Gabelstapler), Telekommunikation, Öffentlicher Dienst,
-				Versicherungen und Banken.</p>
+			<p>
+                Individueller Entwicklungsprozess? Einfache oder komplexe Fachlichkeiten?
+                Großes oder kleines Projektteam? Schnittstellen zu Fremdsystemen? Modernes Frontend?
+                Gewachsenes Backend? Hier sind 16 Jahre Erfahrung in Java und Oracle.
+                Vor Ort verfügbar. 100%. Schwerpunkt Banken.
+            </p>
 
 			<h1>Schwerpunkte</h1>
-			<div class="row-fluid">
-				<ul class="thumbnails">
-					<!-- border-radius: 6px 6px 6px 6px; background-color: #EEEEEE; text-align: center; -->
-					<li class="span4">
-						<h3>Java</h3>
-						<div style="margin: 10px">Java 1.1 bis Java 8 &middot; JUnit
-							&middot; Mockito &middot; Hibernate &middot; Spring &middot; JEE
-							&middot; SOAP &middot; REST &middot; JSF &middot; Groovy</div>
-					</li>
-					<li class="span4">
-						<h3>Datenbanken</h3>
-						<div style="margin: 10px">Oracle 9, 10, 11 &middot; PL/SQL
-							&middot; MySQL</div>
-					</li>
-					<li class="span4">
-						<h3>Tools</h3>
-						<div style="margin: 10px">Tomcat &middot; Websphere &middot;
-							JBOSS &middot; IBM Rational Application Developer &middot; Sparx
-							EA &middot; Maven &middot; Ant &middot; Eclipse &middot; Netbeans
-							&middot; SoapUI
-						</div>
-					</li>
-				</ul>
-
-				<div class="row-fluid">
-					<ul class="thumbnails">
-						<li class="span4">
+            <div class="row">
+                <div class="col-md-4">
+                            <h3>Java</h3>
+                            <div style="margin: 10px">Java 1.1 bis Java 8 &middot; JUnit
+                                &middot; Mockito &middot; Hibernate &middot; Spring &middot; JEE
+                                &middot; SOAP &middot; REST &middot; JSF &middot; Groovy</div>
+                </div>
+                <div class="col-md-4">
+                            <h3>Datenbanken</h3>
+                            <div style="margin: 10px">Oracle 9, 10, 11 &middot; PL/SQL
+                                &middot; MySQL</div>
+                </div>
+                <div class="col-md-4">
+                            <h3>Tools</h3>
+                            <div style="margin: 10px">Tomcat &middot; Websphere &middot;
+                                JBOSS &middot; IBM Rational Application Developer &middot; Sparx
+                                EA &middot; Maven &middot; Ant &middot; Eclipse &middot; Netbeans
+                                &middot; SoapUI
+                            </div>
+                </div>
+				<div class="col-md-4">
 							<h3>Web</h3>
 							<div style="margin: 10px">HTML &middot; CSS &middot;
-								Javascript</div>
-						</li>
-						<li class="span4">
+								Javascript &middot; Grunt &middot; AngularJS</div>
+                </div>
+                <div class="col-md-4">
 							<h3>Zertifikate</h3>
 							<div style="margin: 10px">Diplom Informatiker &middot; Java
 								Certified Programmer &middot; Java Certified Developer &middot;
 								Oracle Certified Master, Java EE 5 Enterprise Architect
 								Certification</div>
-						</li>
-						<li class="span4">
+				</div>
+                <div class="col-md-4">
 							<h3>Tätigkeiten</h3>
 							<div style="margin: 10px">Anforderungsanalyse &middot; UML
 								und ER Modellierung &middot; Testgetriebene Entwicklung &middot;
 								Automatisierung von Entwicklungstätigkeiten &middot; In Vollzeit
 								vor Ort verfügbar &middot;</div>
-						</li>
-					</ul>
-				</div>
+                </div>
 			</div>
 			<div class="hero-unit">
 			    <a id="download"></a>
@@ -173,7 +136,27 @@ body {
 			<h1>Projekteinsätze</h1>
 			<dl class="dl-horizontal">
 				<dt>Zeitraum</dt>
-				<dd>10/2011 - ??/2013</dd>
+				<dd>01/2014 - 06/2015</dd>
+				<dt>Branche</dt>
+				<dd>Direkt Bank</dd>
+				<dt>Standort</dt>
+				<dd>Quickborn</dd>
+				<dt>Titel</dt>
+				<dd>Online Banking</dd>
+				<dt>Beschreibung</dt>
+				<dd>
+                  Anbindung verschiedener Backend-System für die Stammdatenpflege mit SOAP.
+                </dd>
+				<dt>Tools</dt>
+				<dd>Spring Source Tool Suite, JBOSS, Oracle 11, PL/SQL,
+					SQL*Developer, MQ-Series, Jenkins, SOAP UI</dd>
+				<dt>Plattform</dt>
+				<dd>Windows 7, Unix</dd>
+			</dl>
+
+			<dl class="dl-horizontal">
+				<dt>Zeitraum</dt>
+				<dd>10/2011 - 12/2013</dd>
 				<dt>Branche</dt>
 				<dd>Direkt Bank</dd>
 				<dt>Standort</dt>
@@ -489,54 +472,22 @@ body {
 		<!-- /container -->
 
 	</div>
-	<!-- Le javascript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="./js/jquery.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
-	<!--
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
-     -->
-	<footer class="footer">
-		<div class="container">
+	
+	<div class="container">
 			<p>
-				AWTools Web Generator 2.0.0 | Umgesetzt mit <a
+				Umgesetzt mit <a
 					href="http://twitter.github.com/bootstrap/index.html"
 					target="_blank">Bootstrap</a>
 			</p>
 			<p>Gebaut mit Computerunterstützung. Ohne viel Liebe.</p>
-			<ul class="footer-links">
-				<li><a href="http://kombjuda.blogspot.de/">Kombjuda Blog</a></li>
-				<li class="muted">&middot;</li>
-				<li><a href="http://www.jawattdenn.de/">Jawattdenn</a></li>
-				<li class="muted">&middot;</li>
-				<li><a href="http://www.logolars.de/">Logolars</a></li>
-			</ul>
-		</div>
-	</footer>
-<!--
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-40688028-1']);
-      _gaq.push(['_trackPageview']);
+            <p>
+				<a href="http://kombjuda.blogspot.de/">Kombjuda Blog</a>
+				&middot;
+				<a href="http://www.jawattdenn.de/">Jawattdenn</a>
+				&middot;
+				<a href="http://www.logolars.de/">Logolars</a>
+			</p>
+    </div>
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
--->
-</body>
+    </body>
 </html>
