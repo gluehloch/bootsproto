@@ -1,0 +1,107 @@
+body {
+  padding-top: 50px;
+}
+
+.navbar-nav > li:hover {
+    background-color: #193200;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+    background-color: #2E5C00;
+}
+
+.navbar {
+    background-color: #333B00;
+}
+
+.starter-template {
+    padding: 50px 15px;
+    /*padding: 0px 0px;*/
+    text-align: left; /* center */
+
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #FFF;
+    background-color: #C2A385;
+    border-color: #C2A385;
+}
+
+a.list-group-item:focus, a.list-group-item:hover {
+    color: #555;
+    text-decoration: none;
+    background-color: #C2A385;
+    border-color: #C2A385;
+    /* #E0D1C2;*/
+}
+
+a.list-group-item.active {
+    background-color: #A37547;
+    border-color: A37547;
+}
+
+
+/*
+a.list-group-item:focus, a.list-group-item:hover {
+    color: #555;
+    text-decoration: none;
+    background-color: #D6F5D6;
+}
+
+a.list-group-item.active {
+    background-color: #4D704D;
+}
+*/
+
+
+.theme-showcase .navbar .container {
+    width: auto;
+}
+
+.bs-docs-header, .bs-docs-masthead {
+    position: relative;
+    text-align: left;
+    padding: 50px 15px;
+    height: 250px;
+    /*
+    color: #CDBFE3;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+    background-color: #6F5499;
+    background-image: linear-gradient(to bottom, #563D7C 0px, #6F5499 100%);
+    background-repeat: repeat-x;
+    */
+    /* #333B00, #33330F */
+    color: #FFF;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+    background-color: #333B00;
+    /*background-image:  linear-gradient(to bottom, #273300 0px, #2C3300 100%);*/
+    background-image:  url(./../img/aw_logo.png), linear-gradient(to bottom, #273300 0px, #2C3300 100%);
+    background-repeat: no-repeat;
+    background-position: 75% 50%; ; 
+    /*background-repeat: repeat-x;*/
+    /*
+    background-image: url(./../img/aw_logo.png), linear-gradient(to bottom, #333B00, #33330F);
+    background-image: url(./../img/aw_logo.png), -webkit-gradient(linear, left top, left bottom, from(#333B00), to(#33330F));
+    */
+}
+
+#awtools-header {
+
+}
+
+.hero-unit {
+  padding: 60px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  color: inherit;
+  background-color: #eee;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
