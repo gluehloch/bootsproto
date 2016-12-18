@@ -2,26 +2,14 @@ body {
   padding-top: 50px;
 }
 
-.navbar-nav > li:hover {
-    background-color: #193200;
-}
-
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:focus,
-.navbar-inverse .navbar-nav > .active > a:hover {
-    background-color: #2E5C00;
-}
-
 .navbar {
     background-color: #333B00;
 }
 
-.starter-template {
-    padding: 50px 15px;
-    /*padding: 0px 0px;*/
-    text-align: left; /* center */
-
+.navbar-nav > li:hover {
+    /*background-color: #193200;*/
 }
+
 
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
     z-index: 2;
@@ -64,8 +52,9 @@ a.list-group-item.active {
 .bs-docs-header, .bs-docs-masthead {
     position: relative;
     text-align: left;
-    padding: 50px 15px;
-    height: 250px;
+    padding: 100px 15px;
+    height: 300px;
+    margin-bottom: 30px;
     /*
     color: #CDBFE3;
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
@@ -80,7 +69,7 @@ a.list-group-item.active {
     /*background-image:  linear-gradient(to bottom, #273300 0px, #2C3300 100%);*/
     background-image:  url(./../img/aw_logo.png), linear-gradient(to bottom, #273300 0px, #2C3300 100%);
     background-repeat: no-repeat;
-    background-position: 75% 50%; ; 
+    background-position: 75% 50%; ;
     /*background-repeat: repeat-x;*/
     /*
     background-image: url(./../img/aw_logo.png), linear-gradient(to bottom, #333B00, #33330F);
@@ -104,4 +93,3 @@ a.list-group-item.active {
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
-
