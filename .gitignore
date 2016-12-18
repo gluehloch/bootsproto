@@ -3,4 +3,5 @@
 /node_modules
 /target
 my-build.json
-
+/nbproject
+/nbproject/private/
