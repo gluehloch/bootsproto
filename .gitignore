@@ -5,3 +5,6 @@
 my-build.json
 /nbproject
 /nbproject/private/
+.project
+.classpath
+
