@@ -23,7 +23,7 @@
         <base href="/">
         <title>Angular QuickStart</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"></link>
         <link rel="stylesheet" href="src/css/gluehloch.css"></link>
@@ -64,14 +64,6 @@
       aria-expanded="false"
          aria-label="Toggle navigation"></button>
 
-<!--
-<div class="collapse" id="exCollapsingNavbar">
-    <div class="bg-inverse text-muted p-1">
-        <h4>Collapsed content</h4>
-        <span class="text-muted">Toggleable via the navbar brand.</span>
-    </div>
-</div>
--->
       <!--
       <a class="navbar-brand" href="#">Andre Winkler</a>
       -->
@@ -132,7 +124,6 @@
     </div>
 
     <div class="container">
-        <my-app>My App</my-app>
         <a id="start"></a>
         <div class="marketing">
             <h1>Freiberufliche IT Beratung</h1>
@@ -209,105 +200,169 @@
                     aus dem MAZ. 2001 aufgekauft von der ESG.</li>
                 <li><b>1991 .. 1998</b> Studium in Passau. Informatik mit
                     Nebenfach Wirtschaft, Schwerpunkt Fertigungswirtschaft</li>
+                <!--
                 <li><b>1990 .. 1991</b> Bundeswehr Augustdorf</li>
                 <li><b>1990</b> Abitur. Gymnasium Essen Nord Ost</li>
+                -->
             </ul>
             <a id="projects"></a>
             <h1>Projekteinsätze</h1>
-            <dl>
-                <dt>Zeitraum</dt>
-                <dd>01/2014 - 06/2015</dd>
-                <dt>Branche</dt>
-                <dd>Direkt Bank</dd>
-                <dt>Standort</dt>
-                <dd>Quickborn</dd>
-                <dt>Titel</dt>
-                <dd>Online Banking</dd>
-                <dt>Beschreibung</dt>
-                <dd>
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">07/2016 - 12/2016</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Direkt Bank</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Quickborn</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">Online Banking</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">
+                    Migration/Umbau der Altanwendung mit dem Ziel der Entkopplung
+                    einzelner Anwendungsteile. Ablösung und Ersetzung von PL/SQL
+                    Code durch Java.
+                </dd>
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">Maven, Java 8, Junit, Git, PL/SQL</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows 7, Linux</dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">04/2016 - 06/2016</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Direkt Bank</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Quickborn</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">Online Banking</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">
+                    Verwaltung von Freistellungsaufträgen mit Betrachtung
+                    von Einzel- oder gemeinschaftlichen Veranlagungen
+                    über ein oder mehrere Kundenverbindungen.
+                </dd>
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">JSF, Spring Web Flow, Java 8, PL/SQL</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows 7, Unix</dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">01/2016 - 03/2016</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Direkt Bank</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Quickborn</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">Online Banking</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">
+                    Online-Registrierung für das Besparen von ETFs als Bonus für den Einkauf
+                    in einem Partner-Webshop.
+                </dd>
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9"> JSF, Spring Web Flow</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows 7, Unix</dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">01/2014 - 06/2015</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Direkt Bank</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Quickborn</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">Online Banking</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">
                     Anbindung verschiedener Backend-System für die Stammdatenpflege mit SOAP.
                 </dd>
-                <dt>Tools</dt>
-                <dd>Spring Source Tool Suite, JBOSS, Oracle 11, PL/SQL,
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">Spring Source Tool Suite, JBOSS, Oracle 11, PL/SQL,
                     SQL*Developer, MQ-Series, Jenkins, SOAP UI</dd>
-                <dt>Plattform</dt>
-                <dd>Windows 7, Unix</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows 7, Unix</dd>
             </dl>
 
-            <dl class="dl-horizontal">
-                <dt>Zeitraum</dt>
-                <dd>10/2011 - 12/2013</dd>
-                <dt>Branche</dt>
-                <dd>Direkt Bank</dd>
-                <dt>Standort</dt>
-                <dd>Quickborn</dd>
-                <dt>Titel</dt>
-                <dd>Online Banking</dd>
-                <dt>Beschreibung</dt>
-                <dd>Portierung einer Web-Anwndung zur Unterstützung von mobilen
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">10/2011 - 12/2013</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Direkt Bank</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Quickborn</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">Online Banking</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">Portierung einer Web-Anwndung zur Unterstützung von mobilen
                     Endgeräten (Smart- und Feature Phones). Umstellung der JSP/Servlet
                     UseCases auf JSF 2.x. Bugfixing und Vorfallbearbeitung.</dd>
-                <dt>Tools</dt>
-                <dd>Spring Source Tool Suite, JBOSS, Oracle 11, PL/SQL,
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">Spring Source Tool Suite, JBOSS, Oracle 11, PL/SQL,
                     SQL*Developer, MQ-Series, Hudson</dd>
-                <dt>Plattform</dt>
-                <dd>Windows 7, Unix</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows 7, Unix</dd>
             </dl>
 
-            <dl class="dl-horizontal">
-                <dt>Zeitraum</dt>
-                <dd>01/2011 - 09/2011</dd>
-                <dt>Branche</dt>
-                <dd>Bank</dd>
-                <dt>Standort</dt>
-                <dd>Hannover</dd>
-                <dt>Titel</dt>
-                <dd>IPS / KEV / OMTOS</dd>
-                <dt>Beschreibung</dt>
-                <dd>OMTOS ist das elektronische Bietungsverfahren für
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">01/2011 - 09/2011</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Bank</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Hannover</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">IPS / KEV / OMTOS</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">OMTOS ist das elektronische Bietungsverfahren für
                     Offenmarktgeschäfte im Euroraum. IPS das Verwaltungssystem für
                     Pfandkonten. Die Anwendung KEV dient der Einreichung und Verwaltung
                     von Kreditforderungen als Sicherheiten für Notenbankkredite.
                     Redesign/Refactoring einzelner Komponenten, Reportgenerierung,
                     Performance Optimierung, Überarbeitung einzelner Schnittstellen zu
                     Fremdsystemen. Einführung von Unit- und Komponententests.</dd>
-                <dt>Tools</dt>
-                <dd>Rational Application Developer 7.5, Websphere 6, Oracle 11,
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">Rational Application Developer 7.5, Websphere 6, Oracle 11,
                     PL/SQL, SQL*Developer, MQ-Series.</dd>
-                <dt>Plattform</dt>
-                <dd>Windows 7, Unix</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows 7, Unix</dd>
             </dl>
 
-            <dl class="dl-horizontal">
-                <dt>Zeitraum</dt>
-                <dd>11/2010 - 12/2010</dd>
-                <dt>Branche</dt>
-                <dd>Bank</dd>
-                <dt>Standort</dt>
-                <dd>Hamburg, Frankfurt, Prag</dd>
-                <dt>Titel</dt>
-                <dd>RMS</dd>
-                <dt>Beschreibung</dt>
-                <dd>Übergabe der RMS Anwendung an die internen Mitarbeiter.
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">11/2010 - 12/2010</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Bank</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Hamburg, Frankfurt, Prag</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">RMS</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">Übergabe der RMS Anwendung an die internen Mitarbeiter.
                     Überführung in die Wartungsphase. Lösen von vereinzelten
                     Performance Problemen in der Datenbank.</dd>
-                <dt>Tools</dt>
-                <dd>Websphere, Rational Application Developer, Oracle PL/SQL,
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">Websphere, Rational Application Developer, Oracle PL/SQL,
                     SQL*Developer.</dd>
-                <dt>Plattform</dt>
-                <dd>Windows XP, Unix</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows XP, Unix</dd>
             </dl>
-            <dl class="dl-horizontal">
-                <dt>Zeitraum</dt>
-                <dd>12/2008 - 10/2010</dd>
-                <dt>Branche</dt>
-                <dd>Bank</dd>
-                <dt>Standort</dt>
-                <dd>Hamburg, Frankfurt, Prag</dd>
-                <dt>Titel</dt>
-                <dd>RMS - Customer Relationship Manager</dd>
-                <dt>Beschreibung</dt>
-                <dd>Client Profile Erstellung. Anhand der Geschäftsdaten wird
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">12/2008 - 10/2010</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Bank</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Hamburg, Frankfurt, Prag</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">RMS - Customer Relationship Manager</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">Client Profile Erstellung. Anhand der Geschäftsdaten wird
                     ein zeitliches Profil über die Erträge und Kosten eines
                     Kundenberaters erstellt. Zur Anbindung an die IT Welt sind
                     unterschiedliche Protokolle zu verwenden: Connect:Direct und SOAP.
@@ -315,169 +370,169 @@
                     PL/SQL). Die Abnahmetests führt die Fachabteilung in einem
                     separaten, automatisierten Testlabor durch. Die Tests werden in
                     Excel formuliert und automatisiert in das Testlabor übernommen.</dd>
-                <dt>Tools</dt>
-                <dd>Websphere, Rational Application Developer, Oracle PL/SQL,
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">Websphere, Rational Application Developer, Oracle PL/SQL,
                     SQL*Developer, TFS, Maven, JUnit</dd>
-                <dt>Plattform</dt>
-                <dd>Windows XP, Unix</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows XP, Unix</dd>
             </dl>
 
-            <dl class="dl-horizontal">
-                <dt>Zeitraum</dt>
-                <dd>09/2007 - 12/2008</dd>
-                <dt>Branche</dt>
-                <dd>Bank</dd>
-                <dt>Standort</dt>
-                <dd>Hamburg, Frankfurt</dd>
-                <dt>Titel</dt>
-                <dd>IFRS</dd>
-                <dt>Beschreibung</dt>
-                <dd>Implementierung eines Data-Warehouse zur Auswertung aller
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">09/2007 - 12/2008</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Bank</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Hamburg, Frankfurt</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">IFRS</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">Implementierung eines Data-Warehouse zur Auswertung aller
                     Bankgeschäfte. Anhand der Daten wird die Kreditrisikovorsorge der
                     Bank ermittelt. Die Test-Utilities sind in Java geschrieben. Zur
                     Steuerung der Anwendung dient eine Web-Anwendung (Java, JSF).</dd>
-                <dt>Tools</dt>
-                <dd>Oracle PL/SQL, Unit Tests mit Hilfe von Java 6, Eclipse,
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">Oracle PL/SQL, Unit Tests mit Hilfe von Java 6, Eclipse,
                     Maven, JUnit und Groovy. Web-Anwendung mit Hilfe von JSF, Spring
                     und Hibernate entwickelt. Apache POI zur Anbindung der Testfälle an
                     das Testlabor.</dd>
-                <dt>Plattform</dt>
-                <dd>Windows XP, Unix</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows XP, Unix</dd>
             </dl>
 
-            <dl class="dl-horizontal">
-                <dt>Zeitraum</dt>
-                <dd>01/2007 - 07/2007</dd>
-                <dt>Branche</dt>
-                <dd>Ernergie</dd>
-                <dt>Standort</dt>
-                <dd>Hannover</dd>
-                <dt>Titel</dt>
-                <dd>SLA-Manager</dd>
-                <dt>Beschreibung</dt>
-                <dd>Neuentwicklung einer internen Swing Fat Client Anwendung
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">01/2007 - 07/2007</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Ernergie</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Hannover</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">SLA-Manager</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">Neuentwicklung einer internen Swing Fat Client Anwendung
                     zur Pflege von SLAs (Service Level Agreements). Die Client
                     Anwendung ist über Hessian-Burlab an einen Tomcat Server
                     angebunden. Dieser erlaubt den Zugriff über einen Web-Service auf
                     die Datenbank.</dd>
-                <dt>Tools</dt>
-                <dd>Java 6, Eclipse, Swing (JGoodies), Ant, MS-SQLServer,
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">Java 6, Eclipse, Swing (JGoodies), Ant, MS-SQLServer,
                     Hessian Burlab Webservice (SSL), Spring, Hibernate, JUnit</dd>
-                <dt>Plattform</dt>
-                <dd>Windows XP</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows XP</dd>
             </dl>
 
-            <dl class="dl-horizontal">
-                <dt>Zeitraum</dt>
-                <dd>01/2005 - 12/2006</dd>
-                <dt>Branche</dt>
-                <dd>Telekommunikation</dd>
-                <dt>Standort</dt>
-                <dd>Düsseldorf</dd>
-                <dt>Titel</dt>
-                <dd>Planungssoftware für den Mobilfunk.</dd>
-                <dt>Beschreibung</dt>
-                <dd>Neuentwicklung der Planungssoftware für die
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">01/2005 - 12/2006</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Telekommunikation</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Düsseldorf</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">Planungssoftware für den Mobilfunk.</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">Neuentwicklung der Planungssoftware für die
                     Antennenverwaltung im Mobilfunkbereich. Swing Fat-Client
                     Architektur.</dd>
-                <dt>Tools</dt>
-                <dd>Java 5, Eclipse, Spring, Swing (JGoodies: FormLayout,
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">Java 5, Eclipse, Spring, Swing (JGoodies: FormLayout,
                     Binding, Validation), JDO, Ant, Sybase, JUnit</dd>
-                <dt>Plattform</dt>
-                <dd>Windows XP</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows XP</dd>
             </dl>
 
-            <dl class="dl-horizontal">
-                <dt>Zeitraum</dt>
-                <dd>07/2004 - 12/2004</dd>
-                <dt>Branche</dt>
-                <dd>Öffentlicher Dienst, Behörde</dd>
-                <dt>Standort</dt>
-                <dd>Wilhelmshaven</dd>
-                <dt>Titel</dt>
-                <dd>LDAP Zugriff und Synchronisation</dd>
-                <dt>Beschreibung</dt>
-                <dd>Anbindung einer Online Anwendung einer Behörde an eine
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">07/2004 - 12/2004</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Öffentlicher Dienst, Behörde</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Wilhelmshaven</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">LDAP Zugriff und Synchronisation</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">Anbindung einer Online Anwendung einer Behörde an eine
                     bestehende LDAP Infrastruktur.</dd>
-                <dt>Tools</dt>
-                <dd>Java 1.4, JCA/JCE, Struts, Ant, Tomcat, Eclipse, Visual
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">Java 1.4, JCA/JCE, Struts, Ant, Tomcat, Eclipse, Visual
                     Source Safe, LDAP, JUnit</dd>
-                <dt>Plattform</dt>
-                <dd>Windows NT</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows NT</dd>
             </dl>
 
-            <dl class="dl-horizontal">
-                <dt>Zeitraum</dt>
-                <dd>11/2003 - 06/2004</dd>
-                <dt>Branche</dt>
-                <dd>Versicherung</dd>
-                <dt>Standort</dt>
-                <dd>Hamburg</dd>
-                <dt>Titel</dt>
-                <dd>LDAP Zugriff und Synchronisation</dd>
-                <dt>Beschreibung</dt>
-                <dd>Pflege und Wartung einer Online-Anwendung zur
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">11/2003 - 06/2004</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Versicherung</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Hamburg</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">LDAP Zugriff und Synchronisation</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">Pflege und Wartung einer Online-Anwendung zur
                     Angebotserstellung von Versicherungen. Verschlüsselung des
                     Datenverkehrs.</dd>
-                <dt>Tools</dt>
-                <dd>Java 1.4, Ant, Struts, Tomcat, Eclipse, Visual Source Safe,
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">Java 1.4, Ant, Struts, Tomcat, Eclipse, Visual Source Safe,
                     Oracle, JUnit</dd>
-                <dt>Plattform</dt>
-                <dd>Windows NT</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows NT</dd>
             </dl>
 
-            <dl class="dl-horizontal">
-                <dt>Zeitraum</dt>
-                <dd>01/2002 - 06/2003</dd>
-                <dt>Branche</dt>
-                <dd>Bank</dd>
-                <dt>Standort</dt>
-                <dd>Hannover</dd>
-                <dt>Titel</dt>
-                <dd>IPS - Integriertes Pfandkontensystem</dd>
-                <dt>Beschreibung</dt>
-                <dd>Portierung einer Host Anwendung nach J2EE</dd>
-                <dt>Tools</dt>
-                <dd>Java 1.3, EJB 1.0, Struts, Eclipse 1.0, Netbeans, Oracle,
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">01/2002 - 06/2003</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Bank</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Hannover</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">IPS - Integriertes Pfandkontensystem</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">Portierung einer Host Anwendung nach J2EE</dd>
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">Java 1.3, EJB 1.0, Struts, Eclipse 1.0, Netbeans, Oracle,
                     JUnit</dd>
-                <dt>Plattform</dt>
-                <dd>Windows NT, Solaris, Websphere Application Server</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows NT, Solaris, Websphere Application Server</dd>
             </dl>
 
-            <dl class="dl-horizontal">
-                <dt>Zeitraum</dt>
-                <dd>01/2001 - 12/2001</dd>
-                <dt>Branche</dt>
-                <dd>Maschinenbau</dd>
-                <dt>Standort</dt>
-                <dd>Hamburg</dd>
-                <dt>Titel</dt>
-                <dd>SpareManager</dd>
-                <dt>Beschreibung</dt>
-                <dd>Wartung und Pflege einer Online-Anwendung für die
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">01/2001 - 12/2001</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Maschinenbau</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Hamburg</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">SpareManager</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">Wartung und Pflege einer Online-Anwendung für die
                     Bestellung und Lagerhaltung von Ersatzteilen für den Maschinenbau.</dd>
-                <dt>Tools</dt>
-                <dd>Java 1.2, Tomcat 3, Netbeans</dd>
-                <dt>Plattform</dt>
-                <dd>Suse Linux</dd>
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">Java 1.2, Tomcat 3, Netbeans</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Suse Linux</dd>
             </dl>
 
-            <dl class="dl-horizontal">
-                <dt>Zeitraum</dt>
-                <dd>03/1999 - 12/2001</dd>
-                <dt>Branche</dt>
-                <dd>Maschinenbau</dd>
-                <dt>Standort</dt>
-                <dd>Hamburg</dd>
-                <dt>Titel</dt>
-                <dd>DIAMON</dd>
-                <dt>Beschreibung</dt>
-                <dd>Implementierung eines Diagnosemonitors zur
+            <dl class="row">
+                <dt class="col-sm-3 text-xs-right">Zeitraum</dt>
+                <dd class="col-sm-9">03/1999 - 12/2001</dd>
+                <dt class="col-sm-3 text-xs-right">Branche</dt>
+                <dd class="col-sm-9">Maschinenbau</dd>
+                <dt class="col-sm-3 text-xs-right">Standort</dt>
+                <dd class="col-sm-9">Hamburg</dd>
+                <dt class="col-sm-3 text-xs-right">Titel</dt>
+                <dd class="col-sm-9">DIAMON</dd>
+                <dt class="col-sm-3 text-xs-right">Beschreibung</dt>
+                <dd class="col-sm-9">Implementierung eines Diagnosemonitors zur
                     halb-automatischen Fehlerermittlung an Maschinen.</dd>
-                <dt>Tools</dt>
-                <dd>C++, UML 2.0, Visual Studio 6.0, XML</dd>
-                <dt>Plattform</dt>
-                <dd>Windows NT</dd>
+                <dt class="col-sm-3 text-xs-right">Tools</dt>
+                <dd class="col-sm-9">C++, UML 2.0, Visual Studio 6.0, XML</dd>
+                <dt class="col-sm-3 text-xs-right">Plattform</dt>
+                <dd class="col-sm-9">Windows NT</dd>
             </dl>
 
             <a id="cite"></a>
