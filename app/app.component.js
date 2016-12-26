@@ -30,7 +30,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: ""
+            template: "<h4>Successfully loaded</h4>"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

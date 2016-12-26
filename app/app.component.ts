@@ -7,7 +7,7 @@ export class Hero {
 
 @Component({
   selector: 'my-app',
-  template: ``
+  template: `<h4>Successfully loaded</h4>`
 })
 /*
 
