@@ -7,4 +7,4 @@ my-build.json
 /nbproject/private/
 .project
 .classpath
-
+npm-debug*
