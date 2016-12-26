@@ -4,7 +4,7 @@
 /target
 my-build.json
 /nbproject
-/nbproject/private/
 .project
 .classpath
 npm-debug*
+.vscode
