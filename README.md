@@ -16,3 +16,14 @@ Bei der Verwendung von Microsofts Visual Code empfiehlt sich die folgende Einste
     }
 }
 ```
+
+Oder noch besser:
+```
+ {
+    "typescript.check.workspaceVersion": false,
+    "files.exclude": {
+        "**/*.js": {"when": "$(basename).ts"},
+        "**/*.js.map": true
+    }
+}
+```
