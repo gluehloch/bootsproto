@@ -1,4 +1,4 @@
-# gluehloch
+# gluehloch | Andre Winkler IT Services
 
 Die Entwicklungsumgebung wird mit den folgenden Befehlen eingerichtet:
 
@@ -26,4 +26,4 @@ Oder noch besser:
         "**/*.js.map": true
     }
 }
-```
+
