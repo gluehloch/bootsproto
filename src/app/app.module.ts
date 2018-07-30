@@ -10,6 +10,7 @@ import { DownloadComponent } from './download/download.component';
 import { HomeComponent } from './home/home.component';
 import { ProjekteComponent } from './projekte/projekte.component';
 import { ZitateComponent } from './zitate/zitate.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 
 @NgModule({
     imports: [
@@ -31,6 +32,10 @@ import { ZitateComponent } from './zitate/zitate.component';
             {
                 path: 'zitate',
                 component: ZitateComponent
+            },
+            {
+                path: 'impressum',
+                component: ImpressumComponent
             }
         ])
     ],
@@ -40,7 +45,8 @@ import { ZitateComponent } from './zitate/zitate.component';
         HomeComponent,
         ProjekteComponent,
         DownloadComponent,
-        ZitateComponent
+        ZitateComponent,
+        ImpressumComponent
     ],
     bootstrap: [
         AppComponent
