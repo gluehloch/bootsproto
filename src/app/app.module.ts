@@ -6,9 +6,10 @@ import { RouterModule, Router } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { AppComponent } from './app.component';
-import { LebenslaufComponent } from './lebenslauf/lebenslauf.component';
+import { DownloadComponent } from './download/download.component';
 import { HomeComponent } from './home/home.component';
 import { ProjekteComponent } from './projekte/projekte.component';
+import { ZitateComponent } from './zitate/zitate.component';
 
 @NgModule({
     imports: [
@@ -24,12 +25,12 @@ import { ProjekteComponent } from './projekte/projekte.component';
                 component: ProjekteComponent
             },
             {
-                path: 'lebenslauf.pdf',
-                component: LebenslaufComponent,
+                path: 'download',
+                component: DownloadComponent
             },
             {
-                path: '**',
-                component: HomeComponent
+                path: 'zitate',
+                component: ZitateComponent
             }
         ])
     ],
@@ -38,7 +39,8 @@ import { ProjekteComponent } from './projekte/projekte.component';
         AppComponent,
         HomeComponent,
         ProjekteComponent,
-        LebenslaufComponent
+        DownloadComponent,
+        ZitateComponent
     ],
     bootstrap: [
         AppComponent
