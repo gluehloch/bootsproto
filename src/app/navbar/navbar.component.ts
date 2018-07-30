@@ -2,7 +2,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'navbar',
+    selector: 'app-navbar',
     templateUrl: './navbar.component.html'
 })
 export class NavbarComponent {
@@ -13,9 +13,9 @@ export class NavbarComponent {
         this.show = this.show ? false : true;
         // this.collapse = this.collapse === 'open' ? 'closed' : 'open';
     }
-    
+
     closeCollapse() {
         this.show = false;
     }
-    
+
 }

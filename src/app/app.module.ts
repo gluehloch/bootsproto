@@ -7,30 +7,37 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 import { AppComponent } from './app.component';
 import { LebenslaufComponent } from './lebenslauf/lebenslauf.component';
+import { HomeComponent } from './home/home.component';
+import { ProjekteComponent } from './projekte/projekte.component';
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         RouterModule.forRoot([
-            /*
             {
-              path: '',
-              redirectTo: 'home'
-            },*/
-            {
-                path: '',
-                component: AppComponent
+                path: 'home',
+                component: HomeComponent
             },
             {
-                path: 'profil_andre_winkler.pdf',
+                path: 'projekte',
+                component: ProjekteComponent
+            },
+            {
+                path: 'lebenslauf.pdf',
                 component: LebenslaufComponent,
+            },
+            {
+                path: '**',
+                component: HomeComponent
             }
         ])
     ],
     declarations: [
         NavbarComponent,
         AppComponent,
+        HomeComponent,
+        ProjekteComponent,
         LebenslaufComponent
     ],
     bootstrap: [
