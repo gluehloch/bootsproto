@@ -8,3 +8,5 @@ my-build.json
 .classpath
 npm-debug*
 .vscode
+/dist
+
