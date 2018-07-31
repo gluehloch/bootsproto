@@ -36,6 +36,10 @@ import { ImpressumComponent } from './impressum/impressum.component';
             {
                 path: 'impressum',
                 component: ImpressumComponent
+            },
+            {
+                path: '**',
+                component: HomeComponent
             }
         ])
     ],

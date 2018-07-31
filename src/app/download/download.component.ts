@@ -23,22 +23,19 @@ export class DownloadComponent implements OnInit {
     }
 
     openDoc() {
-        window.open('https://www.gulp.de/gulp2/home/profil/andrewinkler?11', '_self');
+        window.open('/profil_andre_winkler.doc', 'nextTarget');
     }
 
     openGulp() {
-        window.open('https://www.gulp.de/gulp2/home/profil/andrewinkler?11', '_self');
-        // https://www.gulp.de/gulp2/home/profil/andrewinkler?11
+        window.open('https://www.gulp.de/gulp2/home/profil/andrewinkler?11', 'nextTarget');
     }
 
     openXing() {
-        window.open('https://www.xing.com/profile/Andre_Winkler', '_self');
-        // https://www.xing.com/profile/Andre_Winkler
+        window.open('https://www.xing.com/profile/Andre_Winkler', 'nextTarget');
     }
 
     openBlog() {
-        window.open('https://kombjuda.blogspot.de/', '_self');
-        // https://kombjuda.blogspot.de/
+        window.open('https://kombjuda.blogspot.de/', 'nextTarget');
     }
 
 }
