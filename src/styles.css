@@ -52,7 +52,7 @@ a.list-group-item.active {
 .bs-docs-header, .bs-docs-masthead {
     position: relative;
     text-align: left;
-    padding: 100px 15px;
+    padding: 150px 15px;
     height: 300px;
     margin-bottom: 30px;
     /*
@@ -69,7 +69,7 @@ a.list-group-item.active {
     /*background-image:  linear-gradient(to bottom, #273300 0px, #2C3300 100%);*/
     background-image:  url(./app/img/aw_logo.png), linear-gradient(to bottom, #273300 0px, #2C3300 100%);
     background-repeat: no-repeat;
-    background-position: 75% 50%; ;
+    background-position: 75% 65%;
     /*background-repeat: repeat-x;*/
     /*
     background-image: url(./../img/aw_logo.png), linear-gradient(to bottom, #333B00, #33330F);
