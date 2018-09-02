@@ -9,4 +9,5 @@ my-build.json
 npm-debug*
 .vscode
 /dist
+build.properties
 
