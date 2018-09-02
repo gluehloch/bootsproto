@@ -10,7 +10,14 @@
     <property name="build" location="build"/>
     <property name="dist" location="dist"/>
 
-    <target name="init">
+    <target name="build">
+        <exec executable="npm" dir="${basedir}">
+            <arg value="run" />
+            <arg value="build" />
+        </exec>
+    </target>
+
+    <target name="deploy">
         <ftp server="andre-winkler.de"
             port="21"
             remotedir="/www/andre-winkler"
