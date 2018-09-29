@@ -17,7 +17,9 @@ pipeline {
                 sh 'java -version'
                 sh 'javac -version'
                 sh 'npm install'
-                sh 'npm build'
+                sh 'npm uninstall -g @angular/cli'
+                sh 'npm cache clean'
+                sh 'npm install -g @angular/cli@latest'
             }
         }
         stage('Test') { 
