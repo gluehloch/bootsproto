@@ -20,7 +20,7 @@ pipeline {
                 sh 'npm uninstall @angular/cli'
                 // sh 'npm cache clean'
                 sh 'npm install @angular/cli@latest'
-                sh 'ng build'
+                sh 'npm run ng -- build'
             }
         }
         stage('Test') { 
