@@ -16,6 +16,8 @@ pipeline {
                 sh 'npm -v'
                 sh 'java -version'
                 sh 'javac -version'
+                sh 'npm install'
+                sh 'ng build'
             }
         }
         stage('Test') { 
