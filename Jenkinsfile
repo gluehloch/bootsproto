@@ -21,6 +21,7 @@ pipeline {
                 // sh 'npm cache clean'
                 sh 'npm install @angular/cli@latest'
                 sh 'npm run ng -- build'
+                sh 'groovy --version'
             }
         }
         stage('Test') { 
