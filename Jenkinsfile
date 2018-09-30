@@ -37,7 +37,7 @@ pipeline {
                         [asciiMode: false,
                         cleanRemote: false,
                         excludes: '',
-                        flatten: false,
+                        flatten: true,
                         makeEmptyDirs: false,
                         noDefaultExcludes: false,
                         patternSeparator: '[, ]+',
