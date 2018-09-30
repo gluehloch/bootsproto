@@ -29,9 +29,9 @@ pipeline {
                 // 
             }
         }
-        stage('Deploy') { 
+        stage('Deploy Prelive') { 
             steps {
-                echo 'Start deploy ...'
+                echo 'Start deploy prelive ...'
                 ftpPublisher alwaysPublishFromMaster: true, continueOnError: false, failOnError: false, publishers: [
                     [configName: 'andre-winkler-prelive', transfers: [
                         [asciiMode: false,
@@ -44,10 +44,30 @@ pipeline {
                         remoteDirectory: '',
                         remoteDirectorySDF: false,
                         removePrefix: '',
-                        sourceFiles: 'dist/angularapp/**.*, dist/angularapp/**.txt']
+                        sourceFiles: 'dist/angularapp/**.*, dist/angularapp/**.txt, src/profil_andre_winkler.*']
                     ], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]
                 ]                
             }
         }
+        stage('Deploy Production') { 
+            steps {
+                echo 'Start deploy production ...'
+                ftpPublisher alwaysPublishFromMaster: true, continueOnError: false, failOnError: false, publishers: [
+                    [configName: 'andre-winkler', transfers: [
+                        [asciiMode: false,
+                        cleanRemote: false,
+                        excludes: '',
+                        flatten: true,
+                        makeEmptyDirs: false,
+                        noDefaultExcludes: false,
+                        patternSeparator: '[, ]+',
+                        remoteDirectory: '',
+                        remoteDirectorySDF: false,
+                        removePrefix: '',
+                        sourceFiles: 'dist/angularapp/**.*, dist/angularapp/**.txt, src/profil_andre_winkler.*']
+                    ], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]
+                ]                
+            }
+        }        
     }
 }
