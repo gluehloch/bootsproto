@@ -41,7 +41,7 @@ pipeline {
                         makeEmptyDirs: false,
                         noDefaultExcludes: false,
                         patternSeparator: '[, ]+',
-                        remoteDirectory: "/www/andre-winkler-prelive",
+                        remoteDirectory: '',
                         remoteDirectorySDF: false,
                         removePrefix: '',
                         sourceFiles: 'dist/angularapp/**.*, dist/angularapp/**.txt']
