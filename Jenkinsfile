@@ -21,7 +21,6 @@ pipeline {
                 // sh 'npm cache clean'
                 sh 'npm install @angular/cli@latest'
                 sh 'npm run ng -- build'
-                sh 'groovy --version'
             }
         }
         stage('Test') { 
@@ -33,7 +32,27 @@ pipeline {
         stage('Deploy') { 
             steps {
                 echo 'Start deploy ...'
+                ftpPublisher alwaysPublishFromMaster: true, continueOnError: false, failOnError: false, publishers: [
+                    [configName: 'andre-winkler-prelive', transfers: [
+                        [asciiMode: false,
+                        cleanRemote: false,
+                        excludes: '',
+                        flatten: false,
+                        makeEmptyDirs: false,
+                        noDefaultExcludes: false,
+                        patternSeparator: '[, ]+',
+                        remoteDirectory: "/www/andre-winkler-prelive",
+                        remoteDirectorySDF: false,
+                        removePrefix: '',
+                        sourceFiles: './dist/angularapp/**.*, ./dist/angularapp/**.txt']
+                    ], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]
+                ]                
             }
         }
     }
 }
+
+
+        {
+
+        }
