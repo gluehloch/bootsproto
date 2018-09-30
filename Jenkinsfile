@@ -44,7 +44,7 @@ pipeline {
                         remoteDirectory: "/www/andre-winkler-prelive",
                         remoteDirectorySDF: false,
                         removePrefix: '',
-                        sourceFiles: './dist/angularapp/**.*, ./dist/angularapp/**.txt']
+                        sourceFiles: 'dist/angularapp/**.*, dist/angularapp/**.txt']
                     ], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]
                 ]                
             }
