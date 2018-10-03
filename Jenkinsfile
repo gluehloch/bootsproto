@@ -32,40 +32,44 @@ pipeline {
         stage('Deploy Prelive') { 
             steps {
                 echo 'Start deploy prelive ...'
-                ftpPublisher masterNodeName: 'master', alwaysPublishFromMaster: true, continueOnError: false, failOnError: false, publishers: [
-                    [configName: 'andre-winkler-prelive', transfers: [
-                        [asciiMode: false,
-                        cleanRemote: false,
-                        excludes: '',
-                        flatten: true,
-                        makeEmptyDirs: false,
-                        noDefaultExcludes: false,
-                        patternSeparator: '[, ]+',
-                        remoteDirectory: '',
-                        remoteDirectorySDF: false,
-                        removePrefix: '',
-                        sourceFiles: 'dist/angularapp/**.*, dist/angularapp/**.txt, src/profil_andre_winkler.*']
-                    ], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]
-                ]                
+                ftpPublisher masterNodeName: 'master', alwaysPublishFromMaster: true, continueOnError: false, failOnError: false,
+                    paramPublish:[parameterName:''],
+                    publishers: [
+                        [configName: 'andre-winkler-prelive', transfers: [
+                            [asciiMode: false,
+                            cleanRemote: false,
+                            excludes: '',
+                            flatten: true,
+                            makeEmptyDirs: false,
+                            noDefaultExcludes: false,
+                            patternSeparator: '[, ]+',
+                            remoteDirectory: '',
+                            remoteDirectorySDF: false,
+                            removePrefix: '',
+                            sourceFiles: 'dist/angularapp/**.*, dist/angularapp/**.txt, src/profil_andre_winkler.*']
+                        ], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]
+                    ]
             }
         }
         stage('Deploy Production') { 
             steps {
                 echo 'Start deploy production ...'
-                ftpPublisher masterNodeName: 'master', alwaysPublishFromMaster: true, continueOnError: false, failOnError: false, publishers: [
-                    [configName: 'andre-winkler', transfers: [
-                        [asciiMode: false,
-                        cleanRemote: false,
-                        excludes: '',
-                        flatten: true,
-                        makeEmptyDirs: false,
-                        noDefaultExcludes: false,
-                        patternSeparator: '[, ]+',
-                        remoteDirectory: '',
-                        remoteDirectorySDF: false,
-                        removePrefix: '',
-                        sourceFiles: 'dist/angularapp/**.*, dist/angularapp/**.txt, src/profil_andre_winkler.*']
-                    ], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]
+                ftpPublisher masterNodeName: 'master', alwaysPublishFromMaster: true, continueOnError: false, failOnError: false,
+                    paramPublish:[parameterName:''],
+                    publishers: [
+                        [configName: 'andre-winkler', transfers: [
+                            [asciiMode: false,
+                            cleanRemote: false,
+                            excludes: '',
+                            flatten: true,
+                            makeEmptyDirs: false,
+                            noDefaultExcludes: false,
+                            patternSeparator: '[, ]+',
+                            remoteDirectory: '',
+                            remoteDirectorySDF: false,
+                            removePrefix: '',
+                            sourceFiles: 'dist/angularapp/**.*, dist/angularapp/**.txt, src/profil_andre_winkler.*']
+                        ], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]
                 ]                
             }
         }        
