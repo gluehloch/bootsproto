@@ -32,7 +32,7 @@ pipeline {
         stage('Deploy Prelive') { 
             steps {
                 echo 'Start deploy prelive ...'
-                ftpPublisher masterNodeName: true, alwaysPublishFromMaster: true, continueOnError: false, failOnError: false, publishers: [
+                ftpPublisher masterNodeName: 'master', alwaysPublishFromMaster: true, continueOnError: false, failOnError: false, publishers: [
                     [configName: 'andre-winkler-prelive', transfers: [
                         [asciiMode: false,
                         cleanRemote: false,
@@ -52,7 +52,7 @@ pipeline {
         stage('Deploy Production') { 
             steps {
                 echo 'Start deploy production ...'
-                ftpPublisher masterNodeName: true, alwaysPublishFromMaster: true, continueOnError: false, failOnError: false, publishers: [
+                ftpPublisher masterNodeName: 'master', alwaysPublishFromMaster: true, continueOnError: false, failOnError: false, publishers: [
                     [configName: 'andre-winkler', transfers: [
                         [asciiMode: false,
                         cleanRemote: false,
