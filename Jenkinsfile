@@ -12,7 +12,7 @@ pipeline {
         stage('Build') { 
             steps {
                 echo 'Start build...'
-                sh 'nodejs -v'
+                sh 'node  -v'
                 sh 'npm -v'
                 sh 'java -version'
                 sh 'javac -version'
