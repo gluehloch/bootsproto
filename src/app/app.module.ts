@@ -12,10 +12,38 @@ import { ProjekteComponent } from './projekte/projekte.component';
 import { ZitateComponent } from './zitate/zitate.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 
+import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
+
+const cookieConfig: NgcCookieConsentConfig = {
+    cookie: {
+        domain: 'localhost:4200'
+    },
+    palette: {
+        popup: {
+            background: '#000'
+        },
+        button: {
+            background: '#f1d600'
+        }
+    },
+    theme: 'edgeless',
+    type: 'opt-out',
+    content: {
+        message: "Diese Webseite verwendet Cookies.",
+        dismiss: "Verstanden",
+        deny: "Verweigern",
+        allow: "Erlauben",
+        link: "Mehr Infos",
+        href: "localhost:4200",
+        policy: "Cookie Policy"
+    }
+};
+
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
+        NgcCookieConsentModule.forRoot(cookieConfig),
         RouterModule.forRoot([
             {
                 path: 'home',
@@ -56,5 +84,4 @@ import { ImpressumComponent } from './impressum/impressum.component';
         AppComponent
     ]
 })
-
 export class AppModule { }
