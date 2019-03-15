@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { NavbarComponent } from './navbar/navbar.component';
 
@@ -13,17 +14,23 @@ import { ZitateComponent } from './zitate/zitate.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 const cookieConfig: NgcCookieConsentConfig = {
     cookie: {
         domain: 'localhost:4200'
     },
     palette: {
-        popup: {
-            background: '#000'
+        "popup": {
+            "background": "#074205",
+            "text": "#ffffff",
+            "link": "#ffffff"
         },
         button: {
-            background: '#f1d600'
+            "background": "#bfc418",
+            "text": "#000000",
+            "border": "transparent"
         }
     },
     theme: 'edgeless',
@@ -39,11 +46,23 @@ const cookieConfig: NgcCookieConsentConfig = {
     }
 };
 
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http, 'assets/', '.json');
+}
+
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
+        HttpClientModule,
         NgcCookieConsentModule.forRoot(cookieConfig),
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
         RouterModule.forRoot([
             {
                 path: 'home',
@@ -70,6 +89,9 @@ const cookieConfig: NgcCookieConsentConfig = {
                 component: HomeComponent
             }
         ])
+    ],
+    exports: [
+        TranslateModule
     ],
     declarations: [
         NavbarComponent,
