@@ -1,11 +1,11 @@
 {
     "cookie": {
-        "header": "DE: Cookies used on the website!",
-        "message": "DE: This website uses cookies to ensure you get the best experience on our website.",
-        "dismiss": "Got it!",
-        "allow": "Allow cookies",
-        "deny": "Decline",
-        "link": "Learn more",
+        "header": "Diese Webseite verwendet Cookies!",
+        "message": "Dieser Webseite verwendet Cookies, um verschieden Funktionen anzubieten. Außerdem werden Cookies zur statistischen Messung der Nutzung der Webseite und zur Messung des Erfolgs von Werbeanzeigen eingesetzt.",
+        "dismiss": "Vestanden!",
+        "allow": "Cookies erlauben",
+        "deny": "Verbieten",
+        "link": "Weitere Informationen",
         "policy": "Cookie Policy"
     }
 }

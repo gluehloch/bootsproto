@@ -19,10 +19,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 const cookieConfig: NgcCookieConsentConfig = {
     cookie: {
-        domain: 'localhost:4200'
+        domain: 'andre-winkler.de'
     },
+    position: "bottom-right",
     palette: {
-        "popup": {
+        popup: {
             "background": "#2b482a",
             "text": "#ffffff",
             "link": "#ffffff"
