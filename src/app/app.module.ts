@@ -42,7 +42,8 @@ const cookieConfig: NgcCookieConsentConfig = {
         deny: "Verweigern",
         allow: "Erlauben",
         link: "Mehr Infos",
-        href: "/impressum",
+        href: "http://www.andre-winkler.de/impressum",
+        target: undefined,
         policy: "Cookie Policy"
     }
 };
