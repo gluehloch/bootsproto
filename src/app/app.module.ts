@@ -42,7 +42,7 @@ const cookieConfig: NgcCookieConsentConfig = {
         deny: "Verweigern",
         allow: "Erlauben",
         link: "Mehr Infos",
-        href: "localhost:4200",
+        href: "/impressum",
         policy: "Cookie Policy"
     }
 };
