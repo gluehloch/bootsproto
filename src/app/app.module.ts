@@ -49,7 +49,7 @@ const cookieConfig: NgcCookieConsentConfig = {
 };
 
 export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http, 'assets/', '.json');
+    return new TranslateHttpLoader(http, 'https://cookie.gluehloch.de/assets/', '.json');
 }
 
 @NgModule({
