@@ -1,18 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 
 export class Cookie {
 
-    key: String;
-    value: String;
+    key: string;
+    value: string;
 
-    constructor(key: String, value: String) {
+    constructor(key: string, value: string) {
         this.key = key;
         this.value = value;
     }
 
+    toJSON(): Object {
+        return JSON.parse(this.value);
+    }
+
     toString(): String {
-        return "Key: " + this.key + ", Value: " + this.value;
+        return 'Key: ' + this.key + ', Value: ' + this.value;
     }
 }
 
@@ -25,6 +28,10 @@ export class ImpressumComponent implements OnInit {
     ngOnInit() {
         const allCookies = this.findAllCookies();
         console.dir(allCookies);
+
+        for (let i = 0; i < allCookies.length; i++) {
+            console.dir(allCookies[i].toJSON());
+        }
     }
 
     private cutSpaces(key: String): String {
@@ -41,9 +48,7 @@ export class ImpressumComponent implements OnInit {
         for (let i = 0; i < cookies.length; i++) {
             const normalizedCookie = this.cutSpaces(cookies[i]);
             const cookieKeyValue = normalizedCookie.split('=');
-            const cookieKey = cookieKeyValue[0];
-            const cookieValue = cookieKeyValue[1];
-            allCookies.push(new Cookie(cookieKey, cookieValue));
+            allCookies.push(new Cookie(cookieKeyValue[0], cookieKeyValue[1]));
         }
         return allCookies;
     }
