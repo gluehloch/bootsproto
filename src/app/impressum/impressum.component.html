@@ -19,11 +19,12 @@
     </p>
     <h2>DSGVO</h2>
     <ul>
-        <li>Es werden keine Cookies gespeichert. Kein Google-Analytics. Kein Facebook like.</li>
         <li>Auf den Server-Logs finden sich die IP Adressen der Besucher. Diese werden regelmäßig gelöscht.</li>
+        <li>Die gespeicherten Cookies finden sich unten in der Aufzählung wieder.</li>
+        <li>Cookies werden gespeichert, um Bentzer zu identifizieren.</li>
     </ul>
     <h2>Cookies</h2>
-    <table>
+    <table class="table condensed">
         <tr *ngFor="let cookie of cookies; let index = index">
             <td>{{cookie.key}}</td>
             <td>{{cookie.value}}</td>
