@@ -22,4 +22,11 @@
         <li>Es werden keine Cookies gespeichert. Kein Google-Analytics. Kein Facebook like.</li>
         <li>Auf den Server-Logs finden sich die IP Adressen der Besucher. Diese werden regelmäßig gelöscht.</li>
     </ul>
+    <h2>Cookies</h2>
+    <table>
+        <tr *ngFor="let cookie of cookies; let index = index">
+            <td>{{cookie.key}}</td>
+            <td>{{cookie.value}}</td>
+        </tr>
+    </table>
 </div>

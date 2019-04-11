@@ -25,12 +25,14 @@ export class Cookie {
 })
 export class ImpressumComponent implements OnInit {
 
-    ngOnInit() {
-        const allCookies = this.findAllCookies();
-        console.dir(allCookies);
+    cookies: Array<Cookie>;
 
-        for (let i = 0; i < allCookies.length; i++) {
-            console.dir(allCookies[i].toJSON());
+    ngOnInit() {
+        this.cookies = this.findAllCookies();
+        console.dir(this.cookies);
+
+        for (let i = 0; i < this.cookies.length; i++) {
+            console.dir(this.cookies[i].toJSON());
         }
     }
 
@@ -68,6 +70,5 @@ export class ImpressumComponent implements OnInit {
         }
         return '';
     }
-
 
 }
