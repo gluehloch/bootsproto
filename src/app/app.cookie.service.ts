@@ -1,3 +1,4 @@
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export class CookieData {
@@ -8,6 +9,7 @@ export class DataTimeJson {
     dataeTime: number;
 }
 
+@Injectable()
 export class CookieService {
     constructor(private http: HttpClient) {
     }
@@ -18,7 +20,11 @@ export class CookieService {
             /*'https://cookie.gluehloch.de/registrationservice/cookie/confirmCookie'*/,
             cookieData,
             {headers: this.createHeader()}
-        );
+        ).subscribe(response => {
+            console.log(response);
+        }, error => {
+            console.log(error);
+        });
     }
 
     private createHeader() {

@@ -109,7 +109,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     ],
     providers: [
         CookieService,
-        HttpClient,
     ],
     bootstrap: [
         AppComponent
