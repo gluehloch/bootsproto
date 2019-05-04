@@ -69,8 +69,7 @@ export class AppComponent implements OnInit, OnDestroy {
             (event: NgcStatusChangeEvent) => {
                 console.log('statusChange: ' + event.status + ', browser: ' +  navigator.userAgent + ', date: ' + Date.now());
 
-                const cookieData = new CookieData();
-                cookieData.acceptCookies = event.status === 'allow' ? true : false;
+                const cookieData = new CookieData(event.status === 'allow' ? true : false);
                 this.cookieService.sendCookieOptions(cookieData);
 
                 // you can use this.ccService.getConfig() to do stuff...

@@ -1,8 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 export class CookieData {
+    website = 'andre-winkler.de';
     acceptCookies: boolean;
+
+    constructor(acceptCookies: boolean) {
+        this.acceptCookies = acceptCookies;
+    }
 }
 
 export class DataTimeJson {
@@ -16,14 +22,13 @@ export class CookieService {
 
     sendCookieOptions(cookieData: CookieData) {
         return this.http.post<boolean>(
-            'http://192.168.99.100:9090/registrationservice/cookie/confirmCookie'
-            /*'https://cookie.gluehloch.de/registrationservice/cookie/confirmCookie'*/,
+            environment.cookieserviceUrl,
             cookieData,
             {headers: this.createHeader()}
         ).subscribe(response => {
-            console.log(response);
+            console.log('CookieService: ' + response);
         }, error => {
-            console.log(error);
+            console.error('CookieService Error:' + error);
         });
     }
 

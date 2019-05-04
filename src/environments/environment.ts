@@ -4,5 +4,7 @@
 // The list of which env maps to which file can be found in `angular-cli.json`.
 
 export const environment = {
-    production: true
+    production: true,
+    website: 'andre-winkler.de.localhost',
+    cookieserviceUrl: 'http://192.168.99.100:9090/registrationservice/cookie/confirmCookie'
 };
