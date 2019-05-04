@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
+import { HttpModule } from '@angular/http';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { NavbarComponent } from './navbar/navbar.component';
@@ -16,6 +17,8 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+import { CookieService } from './app.cookie.service';
 
 const cookieConfig: NgcCookieConsentConfig = {
     cookie: {
@@ -56,6 +59,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     imports: [
         BrowserModule,
         FormsModule,
+        HttpModule,
         HttpClientModule,
         NgcCookieConsentModule.forRoot(cookieConfig),
         TranslateModule.forRoot({
@@ -103,6 +107,9 @@ export function HttpLoaderFactory(http: HttpClient) {
         DownloadComponent,
         ZitateComponent,
         ImpressumComponent
+    ],
+    providers: [
+        CookieService,
     ],
     bootstrap: [
         AppComponent
