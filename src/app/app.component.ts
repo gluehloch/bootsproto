@@ -4,6 +4,8 @@ import { NgcCookieConsentService, NgcInitializeEvent, NgcStatusChangeEvent, NgcN
 import { Subscription } from 'rxjs/Subscription';
 import { TranslateService } from '@ngx-translate/core';
 
+import { CookieData, CookieService } from './app.cookie.service';
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -17,7 +19,10 @@ export class AppComponent implements OnInit, OnDestroy {
     private revokeChoiceSubscription: Subscription;
     private noCookieLawSubscription: Subscription;
 
-    constructor(private ccService: NgcCookieConsentService,  private translateService: TranslateService) { }
+    constructor(private ccService: NgcCookieConsentService,
+            private translateService: TranslateService,
+            private cookieService: CookieService) {
+    }
 
     ngOnInit() {
         this.translateService.addLangs(['en', 'de']);
@@ -44,31 +49,42 @@ export class AppComponent implements OnInit, OnDestroy {
         // subscribe to cookieconsent observables to react to main events
         this.popupOpenSubscription = this.ccService.popupOpen$.subscribe(
             () => {
+                console.log('popupOpen');
                 // you can use this.ccService.getConfig() to do stuff...
             });
 
         this.popupCloseSubscription = this.ccService.popupClose$.subscribe(
             () => {
+                console.log('popupClose');
                 // you can use this.ccService.getConfig() to do stuff...
             });
 
         this.initializeSubscription = this.ccService.initialize$.subscribe(
             (event: NgcInitializeEvent) => {
+                console.log('initialize');
                 // you can use this.ccService.getConfig() to do stuff...
             });
 
         this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
             (event: NgcStatusChangeEvent) => {
+                console.log('statusChange: ' + event.status + ', browser: ' +  navigator.userAgent + ', date: ' + Date.now());
+
+                const cookieData = new CookieData();
+                cookieData.acceptCookies = event.status === 'allow' ? true : false;
+                this.cookieService.sendCookieOptions(cookieData);
+
                 // you can use this.ccService.getConfig() to do stuff...
             });
 
         this.revokeChoiceSubscription = this.ccService.revokeChoice$.subscribe(
             () => {
+                console.log('revokeChoice');
                 // you can use this.ccService.getConfig() to do stuff...
             });
 
         this.noCookieLawSubscription = this.ccService.noCookieLaw$.subscribe(
             (event: NgcNoCookieLawEvent) => {
+                console.log('noCookieLaw');
                 // you can use this.ccService.getConfig() to do stuff...
             });
     }
