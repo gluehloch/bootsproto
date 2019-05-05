@@ -45,13 +45,14 @@ const cookieConfig: NgcCookieConsentConfig = {
         deny: "Verweigern",
         allow: "Erlauben",
         link: "Mehr Infos",
-        href: "localhost:4200",
+        href: "http://www.andre-winkler.de/impressum",
+        target: "",
         policy: "Cookie Policy"
     }
 };
 
 export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http, 'assets/', '.json');
+    return new TranslateHttpLoader(http, 'https://cookie.gluehloch.de/assets/', '.json');
 }
 
 @NgModule({
