@@ -17,6 +17,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 
 import { CookieService } from './app.cookie.service';
 
@@ -61,6 +62,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         FormsModule,
         HttpModule,
         HttpClientModule,
+        NgxTwitterTimelineModule,
         NgcCookieConsentModule.forRoot(cookieConfig),
         TranslateModule.forRoot({
             loader: {
