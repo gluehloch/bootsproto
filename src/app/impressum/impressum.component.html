@@ -24,6 +24,9 @@
         <li>Cookies werden gespeichert, um Bentzer zu identifizieren.</li>
     </ul>
     <h2>Cookies</h2>
+    <div *ngIf="noCookies" class="alert alert-dark" role="alert">
+        Es sind keine Cookies gespeichert.
+    </div>
     <table class="table condensed">
         <tr *ngFor="let cookie of cookies; let index = index">
             <td>{{cookie.key}}</td>
