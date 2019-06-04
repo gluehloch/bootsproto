@@ -25,30 +25,30 @@ const cookieConfig: NgcCookieConsentConfig = {
     cookie: {
         domain: 'andre-winkler.de'
     },
-    position: "bottom-right",
+    position: 'bottom-right',
     palette: {
         popup: {
-            "background": "#2b482a",
-            "text": "#ffffff",
-            "link": "#ffffff"
+            background: '"#2b482a',
+            text: '#ffffff',
+            link: '#ffffff'
         },
         button: {
-            "background": "#bfc418",
-            "text": "#000000",
-            "border": "transparent"
+            background: '#bfc418',
+            text: '#000000',
+            border: 'transparent'
         }
     },
     theme: 'edgeless',
     type: 'opt-out',
     content: {
-        message: "Diese Webseite verwendet Cookies.",
-        dismiss: "Verstanden",
-        deny: "Verweigern",
-        allow: "Erlauben",
-        link: "Mehr Infos",
-        href: "http://www.andre-winkler.de/impressum",
-        target: "",
-        policy: "Cookie Policy"
+        message: 'Diese Webseite verwendet Cookies.',
+        dismiss: 'Verstanden',
+        deny: 'Verweigern',
+        allow: 'Erlauben',
+        link: 'Mehr Infos',
+        href: 'http://www.andre-winkler.de/impressum',
+        target: '',
+        policy: 'Cookie Policy'
     }
 };
 
