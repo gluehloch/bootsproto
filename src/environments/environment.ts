@@ -6,5 +6,5 @@
 export const environment = {
     production: true,
     website: 'andre-winkler.de.localhost',
-    cookieserviceUrl: 'http://192.168.99.100:9090/registrationservice/cookie/confirmCookie'
+    cookieserviceUrl: 'http://192.168.99.101:9090/registrationservice/cookie/confirmCookie'
 };
