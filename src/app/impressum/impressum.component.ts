@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CookieService } from '../cookie/cookie.service';
+
 export class Cookie {
 
     key: string;
@@ -26,14 +28,21 @@ export class Cookie {
 export class ImpressumComponent implements OnInit {
 
     cookies: Array<Cookie>;
+    private cookieService = new CookieService();
+
+    constructor() {
+    }
 
     ngOnInit() {
         this.cookies = this.findAllCookies();
+        /*
         console.dir(this.cookies);
-
         for (let i = 0; i < this.cookies.length; i++) {
-            console.dir(this.cookies[i].toJSON());
+            if (this.cookies && this.cookies[i]) {
+                console.dir(this.cookies[i].toJSON());
+            }
         }
+        */
     }
 
     private cutSpaces(key: String): String {
@@ -43,19 +52,29 @@ export class ImpressumComponent implements OnInit {
         return key;
     }
 
-    findAllCookies(): Cookie[] {
+    hasCookies(): boolean {
+        return this.cookies.length > 0;
+    }
+
+    private findAllCookies(): Cookie[] {
+        const moreCookies = this.cookieService.getAll();
+        const cookiesAllowed = this.cookieService.get('cookieconsent');
+        console.log(cookiesAllowed);
+
         const decodedCookies = decodeURIComponent(document.cookie);
         const cookies = decodedCookies.split(';');
         const allCookies = [];
         for (let i = 0; i < cookies.length; i++) {
             const normalizedCookie = this.cutSpaces(cookies[i]);
             const cookieKeyValue = normalizedCookie.split('=');
-            allCookies.push(new Cookie(cookieKeyValue[0], cookieKeyValue[1]));
+            if (cookieKeyValue[0]) {
+                allCookies.push(new Cookie(cookieKeyValue[0], cookieKeyValue[1]));
+            }
         }
         return allCookies;
     }
 
-    findCookie(cname: String) {
+    private findCookie(cname: String) {
         const name = cname + '=';
         const decodedCookie = decodeURIComponent(document.cookie);
         const ca = decodedCookie.split(';');
