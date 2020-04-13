@@ -16,7 +16,7 @@ export class DataTimeJson {
 }
 
 @Injectable()
-export class CookieService {
+export class CookieConsentSubmit {
     constructor(private http: HttpClient) {
     }
 
@@ -26,9 +26,9 @@ export class CookieService {
             cookieData,
             {headers: this.createHeader()}
         ).subscribe(response => {
-            console.log('CookieService: ' + response);
+            console.log('CookieConsentSubmit: ' + response);
         }, error => {
-            console.error('CookieService Error:' + error);
+            console.error('CookieConsentSubmit Error:' + error);
         });
     }
 
