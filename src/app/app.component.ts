@@ -1,10 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { NgcCookieConsentService, NgcInitializeEvent, NgcStatusChangeEvent, NgcNoCookieLawEvent } from 'ngx-cookieconsent';
+import { NgcCookieConsentService, NgcInitializeEvent, NgcStatusChangeEvent, NgcNoCookieLawEvent, NgcCookieOptions } from 'ngx-cookieconsent';
+
 import { Subscription } from 'rxjs/Subscription';
 import { TranslateService } from '@ngx-translate/core';
+import { CookieService } from './cookie/cookie.service';
 
-import { CookieData, CookieService } from './app.cookie.service';
+import { CookieData, CookieConsentSubmit } from './app.cookieconsentsubmit.service';
 
 @Component({
     selector: 'app-root',
@@ -19,9 +21,11 @@ export class AppComponent implements OnInit, OnDestroy {
     private revokeChoiceSubscription: Subscription;
     private noCookieLawSubscription: Subscription;
 
+    private cookieService = new CookieService();
+
     constructor(private ccService: NgcCookieConsentService,
             private translateService: TranslateService,
-            private cookieService: CookieService) {
+            private cookieConsentSubmit: CookieConsentSubmit) {
     }
 
     ngOnInit() {
@@ -70,7 +74,13 @@ export class AppComponent implements OnInit, OnDestroy {
                 console.log('statusChange: ' + event.status + ', browser: ' +  navigator.userAgent + ', date: ' + Date.now());
 
                 const cookieData = new CookieData(event.status === 'allow' ? true : false);
-                this.cookieService.sendCookieOptions(cookieData);
+                const tomorrow = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+                if (event.status === 'allow') {
+                    this.cookieService.put('cookieconsent', 'allow', {'expires': tomorrow});
+                } else {
+                    this.cookieService.remove('cookieconsent');
+                }
+                this.cookieConsentSubmit.sendCookieOptions(cookieData);
 
                 // you can use this.ccService.getConfig() to do stuff...
             });

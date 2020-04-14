@@ -24,10 +24,15 @@
         <li>Cookies werden gespeichert, um Bentzer zu identifizieren.</li>
     </ul>
     <h2>Cookies</h2>
-    <table class="table condensed">
-        <tr *ngFor="let cookie of cookies; let index = index">
-            <td>{{cookie.key}}</td>
-            <td>{{cookie.value}}</td>
-        </tr>
-    </table>
+    <div *ngIf="hasCookies()">
+        <table class="table condensed">
+            <tr *ngFor="let cookie of cookies; let index = index">
+                <td>{{cookie.key}}</td>
+                <td>{{cookie.value}}</td>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="!hasCookies()">
+        Es sind keine Cookies vorhanden.
+    </div>
 </div>
