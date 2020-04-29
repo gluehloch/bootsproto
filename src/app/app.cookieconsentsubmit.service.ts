@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 export class CookieData {
-    website = 'andre-winkler.de';
+    website = environment.website;
     acceptCookies: boolean;
 
     constructor(acceptCookies: boolean) {
