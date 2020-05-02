@@ -1,6 +1,10 @@
+/*eslint-env node*/
+
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+
+import { Subscription } from 'rxjs';
 
 export class CookieData {
     website = 'andre-winkler.de';
@@ -20,7 +24,7 @@ export class CookieConsentSubmit {
     constructor(private http: HttpClient) {
     }
 
-    sendCookieOptions(cookieData: CookieData) {
+    sendCookieOptions(cookieData: CookieData): Subscription {
         return this.http.post<boolean>(
             environment.cookieserviceUrl,
             cookieData,
@@ -32,7 +36,7 @@ export class CookieConsentSubmit {
         });
     }
 
-    private createHeader() {
+    private createHeader(): HttpHeaders {
         const headers = new HttpHeaders()
             .append('Content-Type', 'application/json')
             .append('Access-Control-Allow-Origin', '*');

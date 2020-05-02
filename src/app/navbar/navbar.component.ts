@@ -9,12 +9,12 @@ export class NavbarComponent {
 
     show = false;
 
-    toggleCollapse() {
+    toggleCollapse(): void {
         this.show = this.show ? false : true;
         // this.collapse = this.collapse === 'open' ? 'closed' : 'open';
     }
 
-    closeCollapse() {
+    closeCollapse(): void {
         this.show = false;
     }
 
