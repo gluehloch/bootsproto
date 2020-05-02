@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ZitateComponent implements OnInit {
 
-    ngOnInit() {
+    ngOnInit(): void {
     }
 
 }
