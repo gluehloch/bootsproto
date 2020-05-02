@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { CookieService } from '../cookie/cookie.service';
 
 export class Cookie {

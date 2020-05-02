@@ -107,7 +107,7 @@ export class CookieService implements ICookieService {
 
     /**
      * @name CookieService#remove
-     *
+     * 
      * @description
      * Remove given cookie.
      *
