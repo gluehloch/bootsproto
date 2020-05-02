@@ -33,7 +33,7 @@ export class ImpressumComponent implements OnInit {
     constructor() {
     }
 
-    ngOnInit() {
+    ngOnInit(): void {
         this.cookies = this.findAllCookies();
         /*
         console.dir(this.cookies);
@@ -74,7 +74,7 @@ export class ImpressumComponent implements OnInit {
         return allCookies;
     }
 
-    private findCookie(cname: String) {
+    private findCookie(cname: String): String {
         const name = cname + '=';
         const decodedCookie = decodeURIComponent(document.cookie);
         const ca = decodedCookie.split(';');

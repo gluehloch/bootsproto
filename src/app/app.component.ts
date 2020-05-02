@@ -1,3 +1,5 @@
+/*eslint-env node*/
+
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { NgcCookieConsentService, NgcInitializeEvent, NgcStatusChangeEvent, NgcNoCookieLawEvent } from 'ngx-cookieconsent';
@@ -29,7 +31,7 @@ export class AppComponent implements OnInit, OnDestroy {
             private cookieConsentSubmit: CookieConsentSubmit) {
     }
 
-    ngOnInit() {
+    ngOnInit(): void {
         this.translateService.addLangs(['en', 'de']);
         this.translateService.setDefaultLang('de');
 
@@ -99,7 +101,7 @@ export class AppComponent implements OnInit, OnDestroy {
             });
     }
 
-    ngOnDestroy() {
+    ngOnDestroy(): void {
         // unsubscribe to cookieconsent observables to prevent memory leaks
         this.popupOpenSubscription.unsubscribe();
         this.popupCloseSubscription.unsubscribe();
