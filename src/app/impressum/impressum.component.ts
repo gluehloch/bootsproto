@@ -22,7 +22,8 @@ export class Cookie {
 
 @Component({
     selector: 'app-impressum',
-    templateUrl: './impressum.component.html'
+    templateUrl: './impressum.component.html',
+    styleUrls: ['./impressum.css']
 })
 export class ImpressumComponent implements OnInit {
 
