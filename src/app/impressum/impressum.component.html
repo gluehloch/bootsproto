@@ -33,7 +33,7 @@
                     <td><b>Key</b></td>
                     <td><b>Value</b></td>
                     <td>
-                        <button type="button" class="btn btn-lg custom-btn-refresh">Refresh</button>
+                        <button type="button" class="btn btn-secondary btn-sm" (click)="refresh()">Aktualisieren</button>
                     </td>
                 </tr>
             </thead>
@@ -42,7 +42,11 @@
                     <td>{{cookie.key}}</td>
                     <td>{{cookie.value}}</td>
                     <td>
-                        <button type="button" class="btn btn-lg minus"></button>
+                        <button type="button" class="btn btn-secondary btn-sm" (click)="remove(cookie.key)">Entfernen</button>
+                        <!--
+                        <a href="#" class="btn btn-secondary btn-sm custom-btn-minus" tabindex="-1" role="button" aria-disabled="true">
+                        </a>
+                        -->
                     </td>
                 </tr>
             </tbody>
