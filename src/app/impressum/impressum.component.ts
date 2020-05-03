@@ -34,7 +34,7 @@ export class ImpressumComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.cookies = this.findAllCookies();
+        this.refresh();
         /*
         console.dir(this.cookies);
         for (let i = 0; i < this.cookies.length; i++) {
@@ -43,6 +43,16 @@ export class ImpressumComponent implements OnInit {
             }
         }
         */
+    }
+
+    refresh(): void {
+        this.cookies = this.findAllCookies();
+    }
+
+    remove(key: string): void {
+        console.log('Remove cookie: ' + key);
+        this.cookieService.remove(key);
+        this.refresh();
     }
 
     private cutSpaces(key: String): String {
