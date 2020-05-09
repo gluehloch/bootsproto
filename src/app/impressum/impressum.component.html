@@ -20,39 +20,43 @@
     <h2>DSGVO</h2>
     <ul>
         <li>Auf den Server-Logs finden sich die IP Adressen der Besucher. Diese werden regelmäßig gelöscht.</li>
-        <li>Die gespeicherten Cookies finden sich unten in der Aufzählung wieder.</li>
-        <li>Cookies werden gespeichert, um Bentzer zu identifizieren.</li>
+        <li>Alle gespeicherten Cookies finden sich unten in der tabellarischen Aufzählung wieder.</li>
+        <li>Cookies werden gespeichert, um Besucher zu identifizieren, die der Speicherung von Cookies
+            zugestimmt haben.
+        </li>
     </ul>
+    <h2>Twitter</h2>
+    <p>
+        <a href="https://twitter.com/andrewinkler?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @andrewinkler</a>
+    </p>
     <h2>Cookies</h2>
 <div>
 </div>
-    <div *ngIf="hasCookies()">
-        <table class="table condensed">
-            <thead>
-                <tr>
-                    <td><b>Key</b></td>
-                    <td><b>Value</b></td>
-                    <td>
-                        <button type="button" class="btn btn-secondary btn-sm" (click)="refresh()">Aktualisieren</button>
-                    </td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let cookie of cookies; let index = index">
-                    <td>{{cookie.key}}</td>
-                    <td>{{cookie.value}}</td>
-                    <td>
-                        <button type="button" class="btn btn-secondary btn-sm" (click)="remove(cookie.key)">Entfernen</button>
-                        <!--
-                        <a href="#" class="btn btn-secondary btn-sm custom-btn-minus" tabindex="-1" role="button" aria-disabled="true">
-                        </a>
-                        -->
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div *ngIf="!hasCookies()">
-        Es sind keine Cookies vorhanden.
-    </div>
+    <table class="table condensed">
+        <thead>
+            <tr>
+                <td><b>Key</b></td>
+                <td><b>Value</b></td>
+                <td>
+                    <button type="button" class="btn btn-secondary btn-sm" (click)="refresh()">Aktualisieren</button>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngIf="!hasCookies()">
+                <td>Es sind keine Cookies vorhanden.</td><td></td><td></td>
+            </tr>
+            <tr *ngFor="let cookie of cookies; let index = index">
+                <td>{{cookie.key}}</td>
+                <td>{{cookie.value}}</td>
+                <td>
+                    <button type="button" class="btn btn-secondary btn-sm" (click)="remove(cookie.key)">Entfernen</button>
+                    <!--
+                    <a href="#" class="btn btn-secondary btn-sm custom-btn-minus" tabindex="-1" role="button" aria-disabled="true">
+                    </a>
+                    -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
