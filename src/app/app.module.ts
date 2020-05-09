@@ -18,6 +18,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { CookieConsentSubmit } from './app.cookieconsentsubmit.service';
+import { FollowTwitterComponent } from './twitter/FollowTwitterComponent';
 
 const cookieConfig: NgcCookieConsentConfig = {
     cookie: {
@@ -104,7 +105,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         ProjekteComponent,
         DownloadComponent,
         ZitateComponent,
-        ImpressumComponent
+        ImpressumComponent,
+        FollowTwitterComponent
     ],
     providers: [
         CookieConsentSubmit,
