@@ -1,13 +1,21 @@
+# Misc
 /bin
 /bower_components
 /node_modules
 /target
-my-build.json
 /nbproject
-.project
-.classpath
-npm-debug*
-.vscode
-/dist
+
+my-build.json
 build.properties
 
+# Visual Code
+.vscode
+
+# Eclipse
+.project
+.classpath
+
+# Node
+npm-debug*
+/dist
+package-lock.json
