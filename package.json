@@ -34,7 +34,7 @@
     "ng2-pdf-viewer": "^5.3.4",
     "ngx-cookieconsent": "^2.2.3",
     "npm": "^6.14.11",
-    "rxjs": "^6.5.3",
+    "rxjs": "^6.6.6",
     "tslib": "^1.14.1",
     "tslint": "^6.1.2",
     "zone.js": "0.10.2"
