@@ -69,31 +69,31 @@ export function HttpLoaderFactory(http: HttpClient) {
             }
         }),
         RouterModule.forRoot([
-            {
-                path: 'home',
-                component: HomeComponent
-            },
-            {
-                path: 'projekte',
-                component: ProjekteComponent
-            },
-            {
-                path: 'download',
-                component: DownloadComponent
-            },
-            {
-                path: 'zitate',
-                component: ZitateComponent
-            },
-            {
-                path: 'impressum',
-                component: ImpressumComponent
-            },
-            {
-                path: '**',
-                component: HomeComponent
-            }
-        ])
+    {
+        path: 'home',
+        component: HomeComponent
+    },
+    {
+        path: 'projekte',
+        component: ProjekteComponent
+    },
+    {
+        path: 'download',
+        component: DownloadComponent
+    },
+    {
+        path: 'zitate',
+        component: ZitateComponent
+    },
+    {
+        path: 'impressum',
+        component: ImpressumComponent
+    },
+    {
+        path: '**',
+        component: HomeComponent
+    }
+], { relativeLinkResolution: 'legacy' })
     ],
     exports: [
         TranslateModule
