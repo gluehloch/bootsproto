@@ -26,4 +26,7 @@ Oder noch besser:
         "**/*.js.map": true
     }
 }
+```
+
+Neuen Rechner eingerichtet: Dondera.
 
