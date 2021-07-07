@@ -11,7 +11,7 @@ var config = {
     localRoot: __dirname,
     remoteRoot: '.',
     // include: ['*', '**/*'],      // this would upload everything except dot files
-    include: ['dist/*'],   // ['*.php', 'dist/*']
+    include: ['dist/angularapp/*'],   // ['*.php', 'dist/*']
     //exclude: ['dist/**/*.map'],     // e.g. exclude sourcemaps
     deleteRemote: true             // delete existing files at destination before uploading
 };
