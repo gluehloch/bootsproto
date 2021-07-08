@@ -13,18 +13,12 @@ var config = {
     port: 21,
     localRoot: __dirname + '/dist/angularapp/',
     remoteRoot: properties.get('ftp.remoteRoot'),
-    // include: ['*', '**/*'],      // this would upload everything except dot files
-    include: ['dist/angularapp/*'],   // ['*.php', 'dist/*']
+    include: ['*', '**/*'],      // this would upload everything except dot files
+    //include: ['*.php', 'dist/*']
     //exclude: ['dist/**/*.map'],     // e.g. exclude sourcemaps
     deleteRemote: true             // delete existing files at destination before uploading
 };
  
-// use with promises
-/*
-ftpDeploy.deploy(config)
-    .then(res => console.log('finished'))
-    .catch(err => console.log(err))
-*/
 ftpDeploy.on('uploading', function(data) {
     data.totalFilesCount;       // total file count being transferred
     data.transferredFileCount; // number of files transferred
@@ -33,7 +27,6 @@ ftpDeploy.on('uploading', function(data) {
     console.log(" | " + data.filename + " | ");
 });
 
-// use with callback
 ftpDeploy.deploy(config, function(err) {
     if (err) console.log(err)
     else console.log('finished');
