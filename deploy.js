@@ -1,7 +1,7 @@
 var FtpDeploy = require('ftp-deploy');
 var propertiesReader = require('properties-reader');
 
-var properties = propertiesReader('./ftp.properties');
+var properties = propertiesReader('./build.properties');
 var ftpDeploy = new FtpDeploy();
  
 console.info(__dirname);
