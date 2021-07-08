@@ -5,8 +5,7 @@
 
 export const environment = {
     production: true,
-    // website: 'andre-winkler.de.localhost',
-    // cookieserviceUrl: 'http://192.168.99.100:9090/registrationservice/cookie/confirmCookie'
-    website: 'andre-winkler.de',
-    cookieserviceUrl: 'https://cookie.gluehloch.de/registrationservice/cookie/confirmCookie'
+    website: 'andre-winkler.de.localhost',
+    // cookieServiceUrl: 'https://cookie.gluehloch.de/registrationservice/cookie/confirmCookie'
+    cookieserviceUrl: 'http://localhost:9090/registrationservice/cookie/confirmCookie'
 };

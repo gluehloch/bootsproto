@@ -30,9 +30,9 @@ export class CookieConsentSubmit {
             cookieData,
             {headers: this.createHeader()}
         ).subscribe(response => {
-            console.log('CookieConsentSubmit: ' + response);
+            console.log('CookieConsentSubmit: ', response);
         }, error => {
-            console.error('CookieConsentSubmit Error:' + error);
+            console.error('CookieConsentSubmit Error:', error);
         });
     }
 
