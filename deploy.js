@@ -1,18 +1,18 @@
 var FtpDeploy = require('ftp-deploy');
 var propertiesReader = require('properties-reader');
 
-var properties = propertiesReader('./build.properties');
 var ftpDeploy = new FtpDeploy();
- 
-console.info(__dirname);
+var properties = propertiesReader('./build.properties');
+
+console.info(__dirname, properties.get('ftp.username'), properties.get('ftp.remoteRoot'));
 
 var config = {
-    user: "x",
-    password: "x",
+    user: properties.get('ftp.username'),
+    password: properties.get('ftp.password'),
     host: "andre-winkler.de",
     port: 21,
     localRoot: __dirname + '/dist/angularapp/',
-    remoteRoot: '/www/andre-winkler-prelive',
+    remoteRoot: properties.get('ftp.remoteRoot'),
     // include: ['*', '**/*'],      // this would upload everything except dot files
     include: ['*'],   // ['*.php', 'dist/*']
     //exclude: ['dist/**/*.map'],     // e.g. exclude sourcemaps
