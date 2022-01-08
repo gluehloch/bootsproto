@@ -19,3 +19,6 @@ build.properties
 npm-debug*
 /dist
 package-lock.json
+
+# Angular
+.angular
