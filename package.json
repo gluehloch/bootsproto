@@ -1,13 +1,14 @@
 {
   "name": "andre-winkler-it",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "build-release": "ng build --configuration=production",
+    "start": "ng serve --configuration development",
+    "start-prod": "ng serve --configuration production",
+    "build": "ng build --configuration development",
+    "build-release": "ng build --configuration production",
     "test": "ng test",
     "e2e": "ng e2e",
     "deploy": "node deploy",
