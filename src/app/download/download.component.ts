@@ -19,11 +19,11 @@ export class DownloadComponent implements OnInit {
             skipLocationChange: true,
         });
         */
-        window.open('/profil_andre_winkler.pdf', 'nextTarget');
+        window.open('./assets/profil_andre_winkler.pdf', 'nextTarget');
     }
 
     openDoc() {
-        window.open('/profil_andre_winkler.doc', 'nextTarget');
+        window.open('./assets/profil_andre_winkler.doc', 'nextTarget');
     }
 
     openGulp() {
@@ -36,6 +36,10 @@ export class DownloadComponent implements OnInit {
 
     openBlog() {
         window.open('https://kombjuda.blogspot.de/', 'nextTarget');
+    }
+
+    openScrumMaster() {
+        window.open('./assets/professional-scrum-master-1.pdf');
     }
 
 }
