@@ -93,7 +93,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         path: '**',
         component: HomeComponent
     }
-], { relativeLinkResolution: 'legacy' })
+], { })
     ],
     exports: [
         TranslateModule
