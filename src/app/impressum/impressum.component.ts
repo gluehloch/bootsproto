@@ -69,11 +69,11 @@ export class ImpressumComponent implements OnInit {
     private findAllCookies(): Cookie[] {
         const moreCookies = this.cookieService.getAll();
         const cookiesAllowed = this.cookieService.get('cookieconsent');
-        console.log(cookiesAllowed);
+        console.log(moreCookies, cookiesAllowed);
 
         const decodedCookies = decodeURIComponent(document.cookie);
         const cookies = decodedCookies.split(';');
-        const allCookies = [];
+        const allCookies = new Array<Cookie>();
         for (let i = 0; i < cookies.length; i++) {
             const normalizedCookie = this.cutSpaces(cookies[i]);
             const cookieKeyValue = normalizedCookie.split('=');

@@ -2,7 +2,7 @@
 
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { NgcCookieConsentService, NgcInitializeEvent, NgcStatusChangeEvent, NgcNoCookieLawEvent } from 'ngx-cookieconsent';
+import { NgcCookieConsentService, NgcInitializeEvent, NgcStatusChangeEvent, NgcNoCookieLawEvent, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 // What is 'NgcCookieOptions'?
 
 import { Subscription } from 'rxjs';
@@ -41,14 +41,15 @@ export class AppComponent implements OnInit, OnDestroy {
         this.translateService
             .get(['cookie.header', 'cookie.message', 'cookie.dismiss', 'cookie.allow', 'cookie.deny', 'cookie.link', 'cookie.policy'])
             .subscribe(data => {
-                this.ccService.getConfig().content = this.ccService.getConfig().content || {} ;
-                this.ccService.getConfig().content.header = data['cookie.header'];
-                this.ccService.getConfig().content.message = data['cookie.message'];
-                this.ccService.getConfig().content.dismiss = data['cookie.dismiss'];
-                this.ccService.getConfig().content.allow = data['cookie.allow'];
-                this.ccService.getConfig().content.deny = data['cookie.deny'];
-                this.ccService.getConfig().content.link = data['cookie.link'];
-                this.ccService.getConfig().content.policy = data['cookie.policy'];
+                let content = this.ccService.getConfig().content || {};
+                // this.ccService.getConfig().content = this.ccService.getConfig().content || {} ;
+                content.header = data['cookie.header'];
+                content.message = data['cookie.message'];
+                content.dismiss = data['cookie.dismiss'];
+                content.allow = data['cookie.allow'];
+                content.deny = data['cookie.deny'];
+                content.link = data['cookie.link'];
+                content.policy = data['cookie.policy'];
                 this.ccService.destroy();
                 this.ccService.init(this.ccService.getConfig());
         });

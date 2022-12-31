@@ -6,6 +6,7 @@
     "importHelpers": true,
     "module": "esnext",
     "outDir": "./dist/out-tsc",
+    "strictNullChecks": true,
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",

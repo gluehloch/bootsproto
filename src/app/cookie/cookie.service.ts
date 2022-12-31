@@ -30,9 +30,9 @@ export class CookieService implements ICookieService {
 
     constructor() {
         this.options = {
-            path: null,
-            domain: null,
-            expires: null,
+            path: undefined,
+            domain: undefined,
+            expires: undefined,
             secure: false,
             httpOnly: false
         };
@@ -115,7 +115,7 @@ export class CookieService implements ICookieService {
      * @param options (Optional) Options object.
      */
     remove(key: string, options?: CookieOptions): void {
-        this._cookieWriter()(key, undefined, options);
+        this._cookieWriter()(key, '', options);
     }
 
     /**
