@@ -16,7 +16,7 @@ export class CookieData {
 }
 
 export class DataTimeJson {
-    dataeTime: number;
+    dateTime = new Date();
 }
 
 @Injectable()
