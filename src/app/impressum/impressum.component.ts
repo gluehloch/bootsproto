@@ -27,7 +27,7 @@ export class Cookie {
 })
 export class ImpressumComponent implements OnInit {
 
-    cookies: Array<Cookie>;
+    cookies: Array<Cookie> = [];
     private cookieService = new CookieService();
 
     constructor() {
