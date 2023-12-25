@@ -15,6 +15,7 @@
   },
   "private": true,
   "dependencies": {
+    "@activescott/cookieconsent": "^6.0.1",
     "@angular/animations": "16.2.12",
     "@angular/common": "16.2.12",
     "@angular/compiler": "16.2.12",
@@ -23,10 +24,9 @@
     "@angular/platform-browser": "16.2.12",
     "@angular/platform-browser-dynamic": "16.2.12",
     "@angular/router": "16.2.12",
-    "@ngx-translate/core": "^11.0.1",
-    "@ngx-translate/http-loader": "^4.0.0",
+    "@ngx-translate/core": "^15.0.0",
+    "@ngx-translate/http-loader": "^8.0.0",
     "acorn": "^6.4.2",
-    "cookieconsent": "^3.1.1",
     "core-js": "^2.6.12",
     "eslint-plugin-prettier": "^3.3.1",
     "jshint": "2.11.0",
@@ -36,7 +36,6 @@
     "npm": "^6.14.11",
     "properties-reader": "^2.2.0",
     "rxjs": "^6.6.6",
-    "tslib": "^2.1.0",
     "tslint": "~6.1.0"
   },
   "devDependencies": {
@@ -67,6 +66,7 @@
     "prettier": "2.0.5",
     "protractor": "~7.0.0",
     "ts-node": "8.6.2",
+    "tslib": "^2.6.2",
     "typescript": "4.9.3",
     "zone.js": "^0.13.3"
   }
