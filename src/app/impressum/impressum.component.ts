@@ -66,6 +66,13 @@ export class ImpressumComponent implements OnInit {
         return this.cookies.length > 0;
     }
 
+    accept(): void {
+
+    }
+
+    deny(): void {
+    }
+
     private findAllCookies(): Cookie[] {
         const moreCookies = this.cookieService.getAll();
         const cookiesAllowed = this.cookieService.get('cookieconsent');
