@@ -11,7 +11,8 @@
     "test": "ng test",
     "e2e": "ng e2e",
     "deploy": "node deploy",
-    "lint": "eslint -c .eslintrc.js --ext .ts ./src/app"
+    "lint": "eslint -c .eslintrc.js --ext .ts ./src/app",
+    "env": "ng version && node --version && npm --version"
   },
   "private": true,
   "dependencies": {
