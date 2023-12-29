@@ -24,7 +24,7 @@
 export interface CookieOptions {
   path?: string;
   domain?: string;
-  expires?: string|Date;
+  expires?: string | Date;
   secure?: boolean;
   httpOnly?: boolean;
   storeUnencoded?: boolean;
