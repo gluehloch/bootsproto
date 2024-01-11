@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from '../cookie/cookie.service';
+import { CookieConsentSubmit } from '../app.cookieconsentsubmit.service';
 
 export class Cookie {
 
@@ -30,7 +31,7 @@ export class ImpressumComponent implements OnInit {
     cookies: Array<Cookie> = [];
     private cookieService = new CookieService();
 
-    constructor() {
+    constructor(private cookieConsentSubmit: CookieConsentSubmit) {
     }
 
     ngOnInit(): void {
