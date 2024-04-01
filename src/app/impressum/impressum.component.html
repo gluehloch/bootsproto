@@ -27,10 +27,7 @@
 
     <!-- Off Canvas Element fuer den Cookie Banner? -->
     <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-        Toggle bottom offcanvas
-    </button>
-    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-        Toggle bottom offcanvas
+        Cookies akzeptieren oder ablehnen.
     </button>
 
     <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
@@ -39,17 +36,24 @@
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body small">
-        Accept all cookie...
-        ...
-        Close Button should be here!
-        <div class="button-accept-or-deny">
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-                Akzepztieren
-            </button>
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-                Abgelehnt
-            </button>
-        </div>
+        <form>
+            <div class="mb-3">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Accept all cookie...</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="btn-group" role="group" aria-label="Accpet or deny">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                        Akzepztieren
+                    </button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                        Abgelehnt
+                    </button>
+                </div>
+            </div>
+        </form>
       </div>
     </div>
 
