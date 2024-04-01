@@ -21,6 +21,6 @@ export class FollowTwitterComponent implements AfterViewInit {
 
     ngAfterViewInit(): void {
         // render tweet button
-        window['twttr'] && window['twttr'].widgets.load();
+        (window as any)['twttr'] && (window as any)['twttr'].widgets.load();
     }
 }

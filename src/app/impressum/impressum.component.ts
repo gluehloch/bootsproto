@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from '../cookie/cookie.service';
+import { CookieConsentSubmit } from '../app.cookieconsentsubmit.service';
 
 export class Cookie {
 
@@ -27,10 +28,10 @@ export class Cookie {
 })
 export class ImpressumComponent implements OnInit {
 
-    cookies: Array<Cookie>;
+    cookies: Array<Cookie> = [];
     private cookieService = new CookieService();
 
-    constructor() {
+    constructor(private cookieConsentSubmit: CookieConsentSubmit) {
     }
 
     ngOnInit(): void {
@@ -66,14 +67,21 @@ export class ImpressumComponent implements OnInit {
         return this.cookies.length > 0;
     }
 
+    accept(): void {
+
+    }
+
+    deny(): void {
+    }
+
     private findAllCookies(): Cookie[] {
         const moreCookies = this.cookieService.getAll();
         const cookiesAllowed = this.cookieService.get('cookieconsent');
-        console.log(cookiesAllowed);
+        console.log(moreCookies, cookiesAllowed);
 
         const decodedCookies = decodeURIComponent(document.cookie);
         const cookies = decodedCookies.split(';');
-        const allCookies = [];
+        const allCookies = new Array<Cookie>();
         for (let i = 0; i < cookies.length; i++) {
             const normalizedCookie = this.cutSpaces(cookies[i]);
             const cookieKeyValue = normalizedCookie.split('=');

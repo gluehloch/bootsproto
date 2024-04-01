@@ -1,7 +1,7 @@
 import { CookieOptions } from './cookie-options.model';
 
 export function isBlank(obj: any): boolean {
-    return obj === undefined || obj === null;
+    return obj === undefined || obj === null || obj === '';
 }
 
 export function isPresent(obj: any): boolean {

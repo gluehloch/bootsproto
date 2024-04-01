@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Noto Sans Chorasmian
+- Font Author: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/chorasmian)
+- Font Source: http://fonts.gstatic.com/s/notosanschorasmian/v1/MQpL-X6uKMC7ROPLwRnI9ULxK_7NVkf8S5vyoH7w4g9b.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

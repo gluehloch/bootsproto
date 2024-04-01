@@ -9,8 +9,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BlogComponent implements OnInit {
 
-    blog: string;
-    item: string;
+    blog: string = '';
+    item: string = '';
 
     constructor(private http: HttpClient) {
     }
@@ -24,7 +24,7 @@ export class BlogComponent implements OnInit {
 
             var parsed = reader.parse(this.blog); // parsed is a 'Node' tree
             // transform parsed if you like...
-            this.item = writer.render(parsed);            
+            this.item = writer.render(parsed);
         });
     }
 

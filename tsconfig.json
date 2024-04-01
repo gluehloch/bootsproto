@@ -1,23 +1,32 @@
 {
+  "angularCompilerOptions": {
+    "strictTemplates": true,
+  },
   "compileOnSave": false,
   "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": "./",
     "downlevelIteration": true,
     "importHelpers": true,
     "module": "esnext",
     "outDir": "./dist/out-tsc",
+    "strictNullChecks": true,
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
+    "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
       "es2015",
       "dom"
-    ]
+    ],
+    "paths": {
+      "tslib" : ["path/to/node_modules/tslib/tslib.d.ts"]
+    },    
   }
 }

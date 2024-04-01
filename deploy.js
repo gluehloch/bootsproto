@@ -20,14 +20,15 @@ var config = {
 };
  
 ftpDeploy.on('uploading', function(data) {
+    /*
     data.totalFilesCount;       // total file count being transferred
     data.transferredFileCount; // number of files transferred
     data.filename;             // partial path with filename being uploaded
-
-    console.log(" | " + data.filename + " | ");
+    */
+    console.log(" | " + data.filename + " | ", data);
 });
 
 ftpDeploy.deploy(config, function(err) {
-    if (err) console.log(err)
+    if (err) console.log(err);
     else console.log('finished');
 });
