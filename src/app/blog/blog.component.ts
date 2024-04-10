@@ -16,7 +16,7 @@ export class BlogComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.http.get('assets/blog1.txt', {responseType: 'text'}).subscribe(data => {
+        this.http.get('assets/blog1.md', {responseType: 'text'}).subscribe(data => {
             this.blog = data;
 
             var reader = new Parser();
