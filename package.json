@@ -16,14 +16,14 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "16.2.12",
-    "@angular/common": "16.2.12",
-    "@angular/compiler": "16.2.12",
-    "@angular/core": "16.2.12",
-    "@angular/forms": "16.2.12",
-    "@angular/platform-browser": "16.2.12",
-    "@angular/platform-browser-dynamic": "16.2.12",
-    "@angular/router": "16.2.12",
+    "@angular/animations": "17.3.12",
+    "@angular/common": "17.3.12",
+    "@angular/compiler": "17.3.12",
+    "@angular/core": "17.3.12",
+    "@angular/forms": "17.3.12",
+    "@angular/platform-browser": "17.3.12",
+    "@angular/platform-browser-dynamic": "17.3.12",
+    "@angular/router": "17.3.12",
     "@popperjs/core": "^2.11.8",
     "acorn": "^6.4.2",
     "andrewinklerit": "file:",
@@ -40,9 +40,9 @@
     "tslint": "~6.1.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^16.0.4",
-    "@angular/cli": "^17.0.8",
-    "@angular/compiler-cli": "16.2.12",
+    "@angular-devkit/build-angular": "^17.3.8",
+    "@angular/cli": "^17.3.8",
+    "@angular/compiler-cli": "17.3.12",
     "@types/jasmine": "3.5.7",
     "@types/jquery": "^3.5.5",
     "@types/lodash": "^4.14.168",
@@ -68,7 +68,7 @@
     "protractor": "~7.0.0",
     "ts-node": "8.6.2",
     "tslib": "^2.6.2",
-    "typescript": "5.2.2",
+    "typescript": "5.4.5",
     "zone.js": "0.14.10"
   }
 }
