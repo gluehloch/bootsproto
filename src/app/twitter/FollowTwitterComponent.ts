@@ -2,7 +2,8 @@ import { Component, ElementRef, AfterViewInit, Input } from '@angular/core';
 
 @Component({
     selector: 'twitter-follow-button',
-    template: `<a href="https://twitter.com/andrewinkler?ref_src=twsrc%5Etfw" [attr.data-text]="text" [attr.data-url]="url" class="twitter-follow-button"></a>`
+    template: `<a href="https://twitter.com/andrewinkler?ref_src=twsrc%5Etfw" [attr.data-text]="text" [attr.data-url]="url" class="twitter-follow-button"></a>`,
+    standalone: true
 })
 
 export class FollowTwitterComponent implements AfterViewInit {

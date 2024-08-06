@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-download',
-    templateUrl: './download.component.html'
+    templateUrl: './download.component.html',
+    standalone: true
 })
 export class DownloadComponent implements OnInit {
 
