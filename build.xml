@@ -21,7 +21,7 @@
         <ftp server="andre-winkler.de"
             port="21"
             remotedir="/www/andre-winkler"
-            userid="${ftp.user}"
+            userid="${ftp.username}"
             password="${ftp.password}"
             passive="yes"
             depends="no"
