@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from '../cookie/cookie.service';
 import { CookieConsentSubmit } from '../app.cookieconsentsubmit.service';
+import { NgIf, NgFor } from '@angular/common';
+import { FollowTwitterComponent } from '../twitter/FollowTwitterComponent';
+import { FormsModule } from '@angular/forms';
 
 export class Cookie {
 
@@ -24,7 +27,9 @@ export class Cookie {
 @Component({
     selector: 'app-impressum',
     templateUrl: './impressum.component.html',
-    styleUrls: ['./impressum.css']
+    styleUrls: ['./impressum.css'],
+    standalone: true,
+    imports: [FormsModule, FollowTwitterComponent, NgIf, NgFor]
 })
 export class ImpressumComponent implements OnInit {
 

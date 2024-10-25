@@ -1,13 +1,56 @@
-import './polyfills.ts';
+import './polyfills';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { enableProdMode } from '@angular/core';
+import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { environment } from './environments/environment';
-import { AppModule } from './app/app.module';
+
+import { AppComponent } from './app/app.component';
+import { ImpressumComponent } from './app/impressum/impressum.component';
+import { ZitateComponent } from './app/zitate/zitate.component';
+import { DownloadComponent } from './app/download/download.component';
+import { ProjekteComponent } from './app/projekte/projekte.component';
+import { HomeComponent } from './app/home/home.component';
+import { provideRouter } from '@angular/router';
+import { withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { CookieConsentSubmit } from './app/app.cookieconsentsubmit.service';
 
 if (environment.production) {
     enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+bootstrapApplication(AppComponent, {
+    providers: [
+        importProvidersFrom(BrowserModule, FormsModule),
+        CookieConsentSubmit,
+        provideHttpClient(withInterceptorsFromDi()),
+        provideRouter([
+            {
+                path: 'home',
+                component: HomeComponent
+            },
+            {
+                path: 'projekte',
+                component: ProjekteComponent
+            },
+            {
+                path: 'download',
+                component: DownloadComponent
+            },
+            {
+                path: 'zitate',
+                component: ZitateComponent
+            },
+            {
+                path: 'impressum',
+                component: ImpressumComponent
+            },
+            {
+                path: '**',
+                component: HomeComponent
+            }
+        ])
+    ]
+})
     .catch(err => console.log(err));
