@@ -11,6 +11,7 @@ build.properties
 
 # Visual Code
 .vscode
+andre-winkler-it.code-workspace
 
 # Eclipse
 .project
