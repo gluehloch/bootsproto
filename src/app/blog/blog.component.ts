@@ -34,7 +34,7 @@ export class BlogComponent implements OnInit {
             this.hrefs.forEach(href => {
                 if (!href.startsWith('http')) {
                     const newHref = 'redirect=' + encodeURI(href);
-                    this.item = this.item.replace(href, newHref);
+                    this.item = this.item.replace("href=\"" + href + "\"", "href=\"" + newHref + "\"");
                 }
             });
         });
