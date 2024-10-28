@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HtmlRenderer, Parser } from 'commonmark';
 
 import { HttpClient } from '@angular/common/http';
@@ -8,6 +8,8 @@ import { HttpClient } from '@angular/common/http';
     templateUrl: './blog.component.html'
 })
 export class BlogComponent implements OnInit {
+
+    @Input() redirect!: string;
 
     blog: string = '';
     item: string = '';
@@ -33,14 +35,14 @@ export class BlogComponent implements OnInit {
 
             this.hrefs.forEach(href => {
                 if (!href.startsWith('http')) {
-                    const newHref = 'redirect=' + encodeURI(href);
+                    const newHref = '@redirect=' + encodeURI(href);
                     this.item = this.item.replace("href=\"" + href + "\"", "href=\"" + newHref + "\"");
                 }
             });
         });
     }
 
-    extractHrefs(html: string): string[] {
+    private extractHrefs(html: string): string[] {
         const hrefs: string[] = [];
         const regex = /href="([^"]*)"/g;
         let match;
