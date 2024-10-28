@@ -16,7 +16,8 @@ export class BlogComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.http.get('assets/blog1.md', {responseType: 'text'}).subscribe(data => {
+        // this.http.get('assets/blog1.md', {responseType: 'text'}).subscribe(data => {
+        this.http.get('https://raw.githubusercontent.com/wiki/gluehloch/java-examples/home.md', {responseType: 'text'}).subscribe(data => {
             this.blog = data;
 
             var reader = new Parser();
@@ -25,6 +26,15 @@ export class BlogComponent implements OnInit {
             var parsed = reader.parse(this.blog); // parsed is a 'Node' tree
             // transform parsed if you like...
             this.item = writer.render(parsed);
+
+            var forEach = Array.prototype.forEach;
+            var links = document.getElementsByTagName('a');
+            forEach.call(links, function (link) {
+                link.onclick = function () {
+                    console.log('Clicked');
+                }
+            
+            });            
         });
     }
 

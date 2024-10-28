@@ -52,7 +52,16 @@
                 "vendorChunk": false,
                 "buildOptimizer": true
               },
-            "development": {}
+            "development": {
+              "optimization": false,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
             },
           "defaultConfiguration": "production"
           },
@@ -120,7 +129,6 @@
           }
         }
       }
-    },
-    "defaultProject": "angularapp"
+    }
   }
   

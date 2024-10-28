@@ -2,7 +2,15 @@
     "extends": "../tsconfig.json",
     "compilerOptions": {
       "outDir": "../out-tsc/app",
-      "types": []
+      "module": "es2015",
+      "types": [],
+      "sourceMap": true,
+      "declaration": false,
+      "moduleResolution": "node",
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "experimentalDecorators": true,
+      "strictNullChecks": true,
     },
     "exclude": [
       "src/test.ts",
