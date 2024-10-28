@@ -11,6 +11,7 @@ export class BlogComponent implements OnInit {
 
     blog: string = '';
     item: string = '';
+    hrefs: string[] = [];
 
     constructor(private http: HttpClient) {
     }
@@ -27,15 +28,26 @@ export class BlogComponent implements OnInit {
             // transform parsed if you like...
             this.item = writer.render(parsed);
 
-            var forEach = Array.prototype.forEach;
-            var links = document.getElementsByTagName('a');
-            forEach.call(links, function (link) {
-                link.onclick = function () {
-                    console.log('Clicked');
+            this.hrefs = this.extractHrefs(this.item);
+            console.dir(this.hrefs);
+
+            this.hrefs.forEach(href => {
+                if (!href.startsWith('http')) {
+                    const newHref = 'redirect=' + encodeURI(href);
+                    this.item = this.item.replace(href, newHref);
                 }
-            
-            });            
+            });
         });
+    }
+
+    extractHrefs(html: string): string[] {
+        const hrefs: string[] = [];
+        const regex = /href="([^"]*)"/g;
+        let match;
+        while ((match = regex.exec(html)) !== null) {
+            hrefs.push(match[1]);
+        }
+        return hrefs;
     }
 
 }
