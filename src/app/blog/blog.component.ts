@@ -9,6 +9,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BlogComponent implements OnInit {
 
+    readonly url = 'https://raw.githubusercontent.com/wiki/gluehloch/java-examples/';
+
     @Input() redirect!: string;
 
     blog: string = '';
@@ -19,8 +21,13 @@ export class BlogComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        // this.http.get('assets/blog1.md', {responseType: 'text'}).subscribe(data => {
-        this.http.get('https://raw.githubusercontent.com/wiki/gluehloch/java-examples/home.md', {responseType: 'text'}).subscribe(data => {
+        const blogger = this.redirect
+            ? this.redirect.startsWith('redirect=')
+                ? this.redirect.slice(9) + '.md'
+                : 'home.md'
+            : 'home.md';
+
+        this.http.get(this.url + blogger, {responseType: 'text'}).subscribe(data => {
             this.blog = data;
 
             var reader = new Parser();
