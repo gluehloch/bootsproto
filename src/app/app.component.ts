@@ -1,6 +1,6 @@
 /*eslint-env node*/
 
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, signal } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 import { CookieService } from './cookie/cookie.service';
