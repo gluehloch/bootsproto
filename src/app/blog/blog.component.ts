@@ -9,7 +9,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BlogComponent implements OnInit {
 
-    readonly url = 'https://raw.githubusercontent.com/wiki/gluehloch/java-examples/';
+    // path=tools/daily-git.md
+    // path=home.md
+    readonly url = 'https://gluehloch.de/git/repository/browse?path=';
 
     @Input() redirect!: string;
 
