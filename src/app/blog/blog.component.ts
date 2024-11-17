@@ -24,9 +24,7 @@ export class BlogComponent implements OnInit {
 
     ngOnInit(): void {
         const blogger = this.redirect
-            ? this.redirect.startsWith('redirect=')
-                ? this.redirect.slice(9) + '.md'
-                : 'home.md'
+            ? this.redirect + '.md'
             : 'home.md';
 
         this.http.get(this.url + blogger, {responseType: 'text'}).subscribe(data => {
@@ -44,7 +42,7 @@ export class BlogComponent implements OnInit {
 
             this.hrefs.forEach(href => {
                 if (!href.startsWith('http')) {
-                    const newHref = '@redirect=' + encodeURI(href);
+                    const newHref = 'http://localhost:4200/blog?redirect=' + encodeURI(href);
                     this.item = this.item.replace("href=\"" + href + "\"", "href=\"" + newHref + "\"");
                 }
             });
