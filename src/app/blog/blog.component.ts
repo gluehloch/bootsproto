@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { HtmlRenderer, Parser } from 'commonmark';
+import { HtmlRenderer, Parser } from '@commonmark/dist/commonmark.js';
 
 import { HttpClient } from '@angular/common/http';
 
