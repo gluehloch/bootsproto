@@ -1,6 +1,6 @@
 /*eslint-env node*/
 
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, signal } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 import { CookieService } from './cookie/cookie.service';
@@ -12,8 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    standalone: true,
-    imports: [NavbarComponent, RouterOutlet],
+    imports: [NavbarComponent, RouterOutlet]
 })
 export class AppComponent implements OnInit, OnDestroy {
 
