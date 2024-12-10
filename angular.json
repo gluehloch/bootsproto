@@ -14,12 +14,15 @@
         "schematics": {},
         "architect": {
           "build": {
-            "builder": "@angular-devkit/build-angular:browser",
+            "builder": "@angular-devkit/build-angular:application",
             "options": {
-              "outputPath": "dist/angularapp",
+              "outputPath": {
+                "base": "dist/angularapp"
+              },
               "index": "src/index.html",
-              "main": "src/main.ts",
-              "polyfills": "src/polyfills.ts",
+              "polyfills": [
+                "src/polyfills.ts"
+              ],
               "tsConfig": "src/tsconfig.app.json",
               "styles": [
                 "node_modules/bootstrap/scss/bootstrap.scss",
@@ -33,7 +36,8 @@
               "assets": [
                 "src/favicon.ico",
                 "src/assets"
-              ]
+              ],
+              "browser": "src/main.ts"
             },
             "configurations": {
               "production": {
@@ -48,9 +52,7 @@
                 "sourceMap": false,
                 "namedChunks": false,
                 "aot": true,
-                "extractLicenses": true,
-                "vendorChunk": false,
-                "buildOptimizer": true
+                "extractLicenses": true
               },
             "development": {}
             },
@@ -62,10 +64,10 @@
             },
             "configurations": {
               "production": {
-                "browserTarget": "angularapp:build:production"
+                "buildTarget": "angularapp:build:production"
               },
             "development": {
-              "browserTarget": "angularapp:build:development"
+              "buildTarget": "angularapp:build:development"
             }
             },
           "defaultConfiguration": "development"
@@ -73,7 +75,7 @@
           "extract-i18n": {
             "builder": "@angular-devkit/build-angular:extract-i18n",
             "options": {
-              "browserTarget": "angularapp:build"
+              "buildTarget": "angularapp:build"
             }
           },
           "test": {
