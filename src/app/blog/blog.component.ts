@@ -32,13 +32,13 @@ export class BlogComponent implements OnInit {
         this.http.get(this.url + blogger, {responseType: 'text'}).subscribe(data => {
             this.blog = data;
 
-            this.hrefs = this.extractHrefs(this.item);
+            this.hrefs = this.extractHrefs(this.blog);
             console.dir(this.hrefs);
 
             this.hrefs.forEach(href => {
                 if (!href.startsWith('http')) {
                     const newHref = 'http://localhost:4200/blog?redirect=' + encodeURI(href);
-                    this.item = this.item.replace("href=\"" + href + "\"", "href=\"" + newHref + "\"");
+                    this.blog = this.blog.replace("href=\"" + href + "\"", "href=\"" + newHref + "\"");
                 }
             });
         });
