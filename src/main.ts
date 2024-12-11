@@ -17,12 +17,15 @@ import { DownloadComponent } from './app/download/download.component';
 import { ProjekteComponent } from './app/projekte/projekte.component';
 import { HomeComponent } from './app/home/home.component';
 
+import { provideMarkdown } from 'ngx-markdown';
+
 if (environment.production) {
     enableProdMode();
 }
 
 bootstrapApplication(AppComponent, {
     providers: [
+        provideMarkdown(),
         importProvidersFrom(BrowserModule, FormsModule),
         CookieConsentSubmit,
         provideHttpClient(withInterceptorsFromDi()),
