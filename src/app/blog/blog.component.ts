@@ -1,15 +1,19 @@
 import { MarkdownComponent } from 'ngx-markdown';
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
+import { LinkInterceptorDirective } from './LinkInterceptor';
 
 @Component({
     selector: 'blog',
     templateUrl: './blog.component.html',
     imports: [MarkdownComponent],
+    hostDirectives: [LinkInterceptorDirective]
 })
 export class BlogComponent implements OnInit {
+
+    @ViewChild('markdown', { static: false }) markdownElement!: ElementRef;
 
     // path=tools/daily-git.md
     // path=home.md
