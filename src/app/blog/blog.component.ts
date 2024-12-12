@@ -1,9 +1,9 @@
 import { MarkdownComponent } from 'ngx-markdown';
 
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
-import { LinkInterceptorDirective } from './LinkInterceptor';
+import { LinkInterceptorDirective } from './LinkInterceptorDirective';
 
 @Component({
     selector: 'blog',
@@ -26,6 +26,10 @@ export class BlogComponent implements OnInit {
     hrefs: string[] = [];
 
     constructor(private http: HttpClient) {
+    }
+
+    ngOnChanges(changes: SimpleChanges) {
+        console.log('Change', this.redirect);
     }
 
     ngOnInit(): void {
