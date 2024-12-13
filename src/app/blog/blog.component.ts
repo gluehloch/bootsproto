@@ -19,7 +19,12 @@ export class BlogComponent implements OnInit {
     // path=home.md
     readonly url = 'https://gluehloch.de/git/repository/browse?path=';
 
-    @Input() redirect!: string;
+    _redirect: string = '';
+
+    @Input()
+    set redirect(redirectUrl: string) {
+        this._redirect = redirectUrl;
+    };
 
     blog: string = '';
     item: string = '';
