@@ -31,6 +31,10 @@ bootstrapApplication(AppComponent, {
         provideHttpClient(withInterceptorsFromDi()),
         provideRouter([
             {
+                path: '',
+                component: HomeComponent
+            },
+            {
                 path: 'home',
                 component: HomeComponent
             },

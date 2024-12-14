@@ -4,6 +4,7 @@ import { Component, ElementRef, Input, OnInit, SimpleChanges, ViewChild } from '
 
 import { HttpClient } from '@angular/common/http';
 import { LinkInterceptorDirective } from './LinkInterceptorDirective';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'blog',
@@ -30,7 +31,7 @@ export class BlogComponent implements OnInit {
     item: string = '';
     hrefs: string[] = [];
 
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private route: ActivatedRoute) {
     }
 
     ngOnChanges(changes: SimpleChanges) {
@@ -55,6 +56,10 @@ export class BlogComponent implements OnInit {
                 }
             });
         });
+
+        this.route.params.subscribe(data => {
+          console.log("data :" + JSON.stringify(data));
+        })        
     }
 
     private extractHrefs(html: string): string[] {

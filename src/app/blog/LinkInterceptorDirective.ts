@@ -20,7 +20,7 @@ export class LinkInterceptorDirective {
                 const routerlink = href.substring(baseURILength);
                 e.preventDefault();
                 e.stopPropagation();
-                this.router.navigate(['/blog?redirect=' + routerlink]);
+                this.router.navigate(['/blog'], { queryParams: { redirect: routerlink } });
                 // this.router.navigate(['/home']);
             }
         }
