@@ -25,6 +25,8 @@ export class BlogComponent implements OnInit {
     @Input()
     set redirect(redirectUrl: string) {
         this._redirect = redirectUrl;
+        this.getResource(redirectUrl + '.md');
+
     };
 
     blog: string = '';
@@ -43,33 +45,18 @@ export class BlogComponent implements OnInit {
             ? this.redirect + '.md'
             : 'home.md';
 
-        this.http.get(this.url + blogger, {responseType: 'text'}).subscribe(data => {
-            this.blog = data;
-
-            this.hrefs = this.extractHrefs(this.blog);
-            console.dir(this.hrefs);
-
-            this.hrefs.forEach(href => {
-                if (!href.startsWith('http')) {
-                    const newHref = 'http://localhost:4200/blog?redirect=' + encodeURI(href);
-                    this.blog = this.blog.replace("href=\"" + href + "\"", "href=\"" + newHref + "\"");
-                }
-            });
-        });
 
         this.route.params.subscribe(data => {
           console.log("data :" + JSON.stringify(data));
-        })        
+        });
+
+        this.getResource(blogger);
     }
 
-    private extractHrefs(html: string): string[] {
-        const hrefs: string[] = [];
-        const regex = /href="([^"]*)"/g;
-        let match;
-        while ((match = regex.exec(html)) !== null) {
-            hrefs.push(match[1]);
-        }
-        return hrefs;
+    private getResource(route: string) {
+        this.http.get(this.url + route, {responseType: 'text'}).subscribe(data => {
+            this.blog = data;
+        });
     }
 
 }
