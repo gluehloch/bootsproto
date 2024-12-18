@@ -18,7 +18,8 @@ export class BlogComponent implements OnInit {
 
     // path=tools/daily-git.md
     // path=home.md
-    readonly url = 'https://gluehloch.de/git/repository/browse?path=';
+    // readonly url = 'https://gluehloch.de/git/repository/browse?path=';
+    readonly url = 'http://localhost:8080/repository/find?file=';
 
     _redirect: string = '';
 
