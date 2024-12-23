@@ -6,6 +6,8 @@ import { HttpClient } from '@angular/common/http';
 import { LinkInterceptorDirective } from './LinkInterceptorDirective';
 import { ActivatedRoute } from '@angular/router';
 
+import { environment } from '../../environments/environment';
+
 @Component({
     selector: 'blog',
     templateUrl: './blog.component.html',
@@ -14,12 +16,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BlogComponent implements OnInit {
 
+    readonly url = environment.gitUrl;
+
     @ViewChild('markdown', { static: false }) markdownElement!: ElementRef;
 
     // path=tools/daily-git.md
     // path=home.md
     // readonly url = 'https://gluehloch.de/git/repository/browse?path=';
-    readonly url = 'http://localhost:8080/repository/find?file=';
+    // readonly url = 'http://localhost:8080/repository/find?file=';
 
     _redirect: string = '';
 
