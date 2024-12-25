@@ -25,13 +25,13 @@ export class BlogComponent implements OnInit {
     // readonly url = 'https://gluehloch.de/git/repository/browse?path=';
     // readonly url = 'http://localhost:8080/repository/find?file=';
 
-    _redirect: string = '';
-
     @Input()
     set redirect(redirectUrl: string) {
-        this._redirect = redirectUrl;
-        this.getResource(redirectUrl + '.md');
-
+        const _redirectUrl = redirectUrl;
+        const blogger = _redirectUrl
+            ? _redirectUrl + '.md'
+            : 'home.md';
+        this.getResource(blogger);
     };
 
     blog: string = '';
@@ -46,17 +46,10 @@ export class BlogComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        const blogger = this.redirect
-            ? this.redirect + '.md'
-            : 'home.md';
-
-
         this.route.params.subscribe(data => {
-          console.log("data :" + JSON.stringify(data));
+            console.log("data :" + JSON.stringify(data));
         });
-
-        this.getResource(blogger);
-    }
+   }
 
     private getResource(route: string) {
         this.http.get(this.url + route, {responseType: 'text'}).subscribe(data => {
