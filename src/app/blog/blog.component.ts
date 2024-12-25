@@ -27,11 +27,18 @@ export class BlogComponent implements OnInit {
 
     @Input()
     set redirect(redirectUrl: string) {
+<<<<<<< HEAD
         const _redirectUrl = redirectUrl;
         const blogger = _redirectUrl
             ? _redirectUrl + '.md'
             : 'home.md';
         this.getResource(blogger);
+=======
+        this._redirect = redirectUrl;
+        if (this._redirect) {
+            this.getResource(redirectUrl + '.md');
+        }
+>>>>>>> c5cda5c (...)
     };
 
     blog: string = '';
