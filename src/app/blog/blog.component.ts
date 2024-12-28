@@ -16,7 +16,7 @@ import { environment } from '../../environments/environment';
 })
 export class BlogComponent implements OnInit {
 
-    readonly url = environment.gitUrl;
+    readonly url = environment.findUrl;
 
     @ViewChild('markdown', { static: false }) markdownElement!: ElementRef;
 
@@ -37,8 +37,7 @@ export class BlogComponent implements OnInit {
     };
 
     blog: string = '';
-    item: string = '';
-    hrefs: string[] = [];
+    index: any;
 
     constructor(private http: HttpClient, private route: ActivatedRoute) {
     }
@@ -51,12 +50,18 @@ export class BlogComponent implements OnInit {
         this.route.params.subscribe(data => {
             console.log("data :" + JSON.stringify(data));
         });
+        this.getIndex();
    }
 
-    private getResource(route: string) {
+    private getResource(route: string): void {
         this.http.get(this.url + route, {responseType: 'text'}).subscribe(data => {
             this.blog = data;
         });
     }
 
+    private getIndex(): void {
+        this.http.get(environment.gitUrl + '/index').subscribe(data => {
+            this.index = data;
+        });
+    }
 }
