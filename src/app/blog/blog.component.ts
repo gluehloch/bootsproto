@@ -1,17 +1,19 @@
-import { MarkdownComponent } from 'ngx-markdown';
-
 import { Component, ElementRef, Input, OnInit, SimpleChanges, ViewChild } from '@angular/core';
-
 import { HttpClient } from '@angular/common/http';
-import { LinkInterceptorDirective } from './LinkInterceptorDirective';
 import { ActivatedRoute } from '@angular/router';
 
+import { MarkdownComponent } from 'ngx-markdown';
+
 import { environment } from '../../environments/environment';
+import { SpinnerComponent } from '../spinner/spinner.component';
+
+import { LinkInterceptorDirective } from './LinkInterceptorDirective';
+
 
 @Component({
     selector: 'blog',
     templateUrl: './blog.component.html',
-    imports: [MarkdownComponent],
+    imports: [MarkdownComponent, SpinnerComponent],
     hostDirectives: [LinkInterceptorDirective]
 })
 export class BlogComponent implements OnInit {
@@ -31,9 +33,11 @@ export class BlogComponent implements OnInit {
         } else {
             _redirectUrl = 'home.md';
         }
+        this.ready = false;
         this.getResource(_redirectUrl);
     };
 
+    ready = false;
     blog: string = '';
     index: any;
 
@@ -48,7 +52,6 @@ export class BlogComponent implements OnInit {
         this.route.params.subscribe(data => {
             console.log("data", data);
         });
-        this.getIndex();
    }
 
     private getResource(route: string): void {
@@ -61,20 +64,7 @@ export class BlogComponent implements OnInit {
             },
             complete: () => {
                 console.log('Completed');
-            }
-        });
-    }
-
-    private getIndex(): void {
-        this.http.get(environment.gitUrl + '/index').subscribe({
-            next: data => {
-                this.index = data;
-            },
-            error: error => {
-                console.error('There was an error!', error);
-            },
-            complete: () => {
-                console.log('Completed');
+                this.ready = true;
             }
         });
     }
