@@ -16,8 +16,6 @@ import { environment } from '../../environments/environment';
 })
 export class BlogComponent implements OnInit {
 
-    readonly url = environment.findUrl;
-
     @ViewChild('markdown', { static: false }) markdownElement!: ElementRef;
 
     // path=tools/daily-git.md
@@ -48,20 +46,37 @@ export class BlogComponent implements OnInit {
 
     ngOnInit(): void {
         this.route.params.subscribe(data => {
-            console.log("data :" + JSON.stringify(data));
+            console.log("data", data);
         });
         this.getIndex();
    }
 
     private getResource(route: string): void {
-        this.http.get(this.url + route, {responseType: 'text'}).subscribe(data => {
-            this.blog = data;
+        this.http.get(environment.findUrl + route, {responseType: 'text'}).subscribe({
+            next: data => {
+                this.blog = data;
+            },
+            error: error => {
+                console.error('There was an error!', error);
+            },
+            complete: () => {
+                console.log('Completed');
+            }
         });
     }
 
     private getIndex(): void {
-        this.http.get(environment.gitUrl + '/index').subscribe(data => {
-            this.index = data;
+        this.http.get(environment.gitUrl + '/index').subscribe({
+            next: data => {
+                this.index = data;
+            },
+            error: error => {
+                console.error('There was an error!', error);
+            },
+            complete: () => {
+                console.log('Completed');
+            }
         });
     }
+
 }
