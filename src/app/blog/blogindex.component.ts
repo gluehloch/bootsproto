@@ -1,3 +1,4 @@
+import { NgFor, NgIf } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { ActivatedRoute } from "@angular/router";
@@ -11,13 +12,13 @@ import { LinkInterceptorDirective } from "./LinkInterceptorDirective";
 type Content = {
     path: string;
     fileName: string;
-    type: 'MRKDOWN' | 'TXT' | 'PNG' | 'UNKNOWN';
+    type: 'MARKDOWN' | 'TXT' | 'PNG' | 'UNKNOWN';
 }
 
 @Component({
-    selector: 'index',
+    selector: 'blog-index',
     templateUrl: './blogindex.component.html',
-    imports: [MarkdownComponent],
+    imports: [NgFor],
     hostDirectives: [LinkInterceptorDirective]
 })
 export class BlogIndexComponent implements OnInit {

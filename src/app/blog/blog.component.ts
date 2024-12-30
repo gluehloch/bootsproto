@@ -8,12 +8,14 @@ import { environment } from '../../environments/environment';
 import { SpinnerComponent } from '../spinner/spinner.component';
 
 import { LinkInterceptorDirective } from './LinkInterceptorDirective';
+import { BlogIndexComponent } from './blogindex.component';
 
 
 @Component({
     selector: 'blog',
     templateUrl: './blog.component.html',
-    imports: [MarkdownComponent, SpinnerComponent],
+    imports: [MarkdownComponent, SpinnerComponent, BlogIndexComponent],
+    standalone: true,
     hostDirectives: [LinkInterceptorDirective]
 })
 export class BlogComponent implements OnInit {
@@ -28,8 +30,10 @@ export class BlogComponent implements OnInit {
     @Input()
     set redirect(redirectUrl: string) {
         let _redirectUrl = redirectUrl;
-        if (redirectUrl) {
-            _redirectUrl = _redirectUrl + '.md';
+        if (_redirectUrl) {
+            if (!redirectUrl.endsWith('.md')) {
+                _redirectUrl = _redirectUrl + '.md';
+            }
         } else {
             _redirectUrl = 'home.md';
         }

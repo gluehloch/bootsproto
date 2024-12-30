@@ -1,2 +1,6 @@
 <div>
+    <div *ngFor="let item of index">
+        {{item.path}} {{item.fileName}} {{item.type}}
+        <a [href]="item.fileName">{{item.fileName}}</a>
+    </div>
 </div>
