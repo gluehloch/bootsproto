@@ -15,7 +15,7 @@ type Content = {
     path: string;
     fileName: string;
     type: 'MARKDOWN' | 'TXT' | 'PNG' | 'UNKNOWN';
-    status: 'published' | 'draft' | 'archived' | 'deleted';
+    status: 'PUBLISHED' | 'DRAFT' | 'ARCHIVED' | 'DELETED';
 }
 
 @Component({
