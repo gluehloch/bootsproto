@@ -10,9 +10,12 @@ import { environment } from '../../environments/environment';
 import { LinkInterceptorDirective } from "./LinkInterceptorDirective";
 
 type Content = {
+    name: string;
+    shortName: string;    
     path: string;
     fileName: string;
     type: 'MARKDOWN' | 'TXT' | 'PNG' | 'UNKNOWN';
+    status: 'published' | 'draft' | 'archived' | 'deleted';
 }
 
 @Component({
