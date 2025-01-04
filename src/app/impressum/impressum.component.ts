@@ -28,7 +28,6 @@ export class Cookie {
     selector: 'app-impressum',
     templateUrl: './impressum.component.html',
     styleUrls: ['./impressum.css'],
-    standalone: true,
     imports: [FormsModule, FollowTwitterComponent, NgIf, NgFor]
 })
 export class ImpressumComponent implements OnInit {

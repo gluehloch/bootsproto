@@ -7,7 +7,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "./",
-    "downlevelIteration": true,
+    "esModuleInterop": true,
     "importHelpers": true,
     "module": "esnext",
     "outDir": "./dist/out-tsc",
