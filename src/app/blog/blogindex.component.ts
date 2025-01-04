@@ -14,7 +14,7 @@ type Content = {
     shortName: string;    
     path: string;
     fileName: string;
-    type: 'MARKDOWN' | 'TXT' | 'PNG' | 'UNKNOWN';
+    type: 'JSON' | 'MARKDOWN' | 'TXT' | 'PNG' | 'UNKNOWN';
     status: 'PUBLISHED' | 'DRAFT' | 'ARCHIVED' | 'DELETED';
 }
 
